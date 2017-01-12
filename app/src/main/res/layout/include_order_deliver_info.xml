@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            style="@style/Title.Card.WithPadding"
+            android:background="@color/dark_gray_bg"
+            android:text="@string/label_delivery_detail"
+            />
+
+        <LinearLayout
+            style="@style/Card.WithDivider"
+            android:layout_marginTop="0.0dip">
+
+            <LinearLayout style="@style/CardItem.FixedHeight">
+
+                <TextView
+                    style="@style/Txt.Hint"
+                    android:text="期望时间"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_deliver_time"
+                    style="@style/Txt.Main.Weighted"
+                    android:layout_marginLeft="@dimen/spacing_massive"
+                    tools:text="立即配送"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CardItem.FixedHeight">
+
+                <TextView
+                    style="@style/Txt.Hint"
+                    android:text="顾客姓名"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_deliver_name"
+                    style="@style/Txt.Main.Weighted"
+                    android:layout_marginLeft="@dimen/spacing_massive"
+                    tools:text="王宏"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CardItem.FixedHeight">
+
+                <TextView
+                    style="@style/Txt.Hint"
+                    android:text="顾客电话"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_deliver_phone"
+                    style="@style/Txt.Main.Weighted"
+                    android:layout_marginLeft="@dimen/spacing_massive"
+                    tools:text="189-9648-0894"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CardItem.AutoHeight">
+
+                <TextView
+                    style="@style/Txt.Hint"
+                    android:text="顾客地址"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_deliver_address"
+                    style="@style/Txt.Main.Multi.Weighted"
+                    android:layout_marginLeft="@dimen/spacing_massive"
+                    tools:text="上海市金沙江路1518弄2号近体城市广场16楼"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</merge>

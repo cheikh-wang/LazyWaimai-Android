@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_gray_bg">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.cheikh.lazywaimai.widget.section.SectionListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_major"
+        >
+
+        <com.cheikh.lazywaimai.widget.section.SectionTextItemView
+            android:id="@+id/btn_check_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_icon="@drawable/ic_version_update"
+            app:siv_name="@string/label_check_update"
+            app:siv_indicator="true"
+            />
+
+        <com.cheikh.lazywaimai.widget.section.SectionTextItemView
+            android:id="@+id/btn_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_icon="@drawable/ic_feedback"
+            app:siv_name="@string/label_feedback"
+            app:siv_indicator="true"
+            />
+
+    </com.cheikh.lazywaimai.widget.section.SectionListView>
+
+    <LinearLayout
+        android:id="@+id/layout_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_major"
+        android:layout_marginBottom="@dimen/spacing_major"
+        android:paddingTop="@dimen/divider_size"
+        android:paddingBottom="@dimen/divider_size"
+        android:background="@drawable/bg_section_list"
+        >
+
+        <TextView
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/section_height"
+            android:gravity="center"
+            android:text="@string/label_logout"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/red"
+            android:background="@drawable/selector_common_item_bg"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

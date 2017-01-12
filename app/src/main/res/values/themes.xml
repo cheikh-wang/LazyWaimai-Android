@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Platform.Theme.LazyOrder" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="Platform.Theme.LazyOrder.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="Base.Theme.LazyOrder" parent="Platform.Theme.LazyOrder">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Base.Theme.LazyOrder.Dark" parent="Platform.Theme.LazyOrder.Dark">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Theme.LazyOrder" parent="Base.Theme.LazyOrder">
+        <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
+        <item name="android:progressBarStyleHorizontal">@style/Widget.LazyOrder.ProgressBar</item>
+        <!--<item name="grey_shade">@color/gray_light</item>-->
+        <!--<item name="windowActionModeOverlay">true</item>-->
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+
+        <item name="android:windowBackground">@color/dark_gray_bg</item>
+
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+
+
+        <!-- 各控制元件(Button不在此列)被勾选或是选定的颜色 -->
+        <item name="colorAccent">@color/accent</item>
+
+        <!-- 各控制元件(Button不在此列)的预设颜色 -->
+        <item name="colorControlNormal">@color/primary</item>
+
+        <!-- 各控制原件(Button不在此列)被激活后的颜色(如果不设置，则使用colorAccent的颜色) -->
+        <item name="colorControlActivated">@color/primary_dark</item>
+
+        <!-- 各控制原件(Button在此列)的强调色，比如按钮按下后的波纹、背景的颜色 -->
+        <item name="colorControlHighlight">@color/primary_dark</item>
+
+        <item name="colorButtonNormal">@color/primary</item>
+
+        <!-- 输入框提示文本的颜色 -->
+        <item name="android:textColorHint">@color/icons</item>
+
+        <item name="divider">@color/divider</item>
+    </style>
+
+    <style name="Theme.Philm.Images" parent="Base.Theme.LazyOrder.Dark">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="Theme.Philm.Framed" parent="Theme.LazyOrder">
+        <item name="windowActionBarOverlay">false</item>
+    </style>
+</resources>

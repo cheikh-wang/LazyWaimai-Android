@@ -1,0 +1,259 @@
+<resources>
+
+    <style name="WindowAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/right_out</item>
+        <item name="android:taskOpenEnterAnimation">@anim/right_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/right_out</item>
+        <item name="android:taskCloseEnterAnimation">@anim/left_in</item>
+        <item name="android:taskCloseExitAnimation">@anim/right_out</item>
+    </style>
+
+    <style name="Widget.LazyOrder.ProgressBar" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:panelBackground">?attr/colorPrimary</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+    </style>
+
+    <style name="Widget.LazyOrder.WaitDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item><!-- 设置为浮动窗口 -->
+        <item name="android:windowFrame">@null</item><!-- 设置无边框 -->
+        <item name="android:windowNoTitle">true</item><!-- 设置无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 设置完全透明 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 设置屏幕变暗 -->
+    </style>
+
+    <style name="Widget.LazyOrder.UserCenterItem" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:drawablePadding">@dimen/spacing_major</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/spacing_major</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:background">@drawable/selector_common_item_bg</item>
+    </style>
+
+    <style name="Widget.LazyOrder.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Widget.LazyOrder.Button" parent="Widget.AppCompat.Button">
+        <item name="android:paddingLeft">@dimen/spacing_micro</item>
+        <item name="android:paddingRight">@dimen/spacing_micro</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_blue_corners_button</item>
+    </style>
+
+    <style name="Widget.Drawer.AddAccount" parent="android:Widget">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Widget.LazyOrder.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="contentInsetStart">24dp</item>
+    </style>
+
+    <style name="Widget.LazyOrder.Toolbar.Transparent">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="TextAppearance.LazyOrder.Tab" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/tab_text</item>
+    </style>
+
+
+
+
+    <style name="Txt">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Txt.Main" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/secondary_text</item>
+    </style>
+
+    <style name="Txt.Main.Right" parent="@style/Txt.Main">
+        <item name="android:gravity">center|right</item>
+    </style>
+
+    <style name="Txt.Main.Weighted" parent="@style/Txt.Main">
+        <item name="android:layout_width">0.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="Txt.Main.Weighted.Right" parent="@style/Txt.Main.Weighted">
+        <item name="android:gravity">center|right</item>
+    </style>
+
+    <style name="Txt.Main.Multi" parent="@style/Txt.Main">
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="Txt.Main.Multi.Weighted" parent="@style/Txt.Main.Multi">
+        <item name="android:layout_width">0.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="Txt.Info" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="Txt.Info.Multi" parent="@style/Txt.Info">
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="Txt.Hint.Weighted" parent="@style/Txt.Hint">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="Txt.Hint.Weighted.Right" parent="@style/Txt.Hint.Weighted">
+        <item name="android:gravity">center|right</item>
+    </style>
+
+    <style name="Txt.Emphasize" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">#fffb4e44</item>
+    </style>
+
+    <style name="Txt.Emphasize.Multi" parent="@style/Txt.Emphasize">
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="Txt.Emphasize.Weighted" parent="@style/Txt.Emphasize">
+        <item name="android:layout_width">0.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="Txt.Emphasize.Weighted.Right" parent="@style/Txt.Emphasize.Weighted">
+        <item name="android:textColor">#fffec520</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+
+    <style name="Txt.AuxiliaryInfo" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_smaller</item>
+        <item name="android:textColor">#ff656565</item>
+    </style>
+
+    <style name="Txt.Hint" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="Txt.Auxiliary" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="Txt.EmphasizedHuge" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_larger</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="Title" parent="@style/Txt">
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+    <style name="Title.Card" parent="@style/Title">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/spacing_minor</item>
+    </style>
+    <style name="Title.Card.Weighted" parent="@style/Title.Card">
+        <item name="android:layout_width">0.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="Title.Card.WithPadding" parent="@style/Title.Card">
+        <item name="android:paddingLeft">@dimen/spacing_major</item>
+        <item name="android:paddingRight">@dimen/spacing_major</item>
+    </style>
+
+
+
+    <style name="Button">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40.0dip</item>
+    </style>
+
+    <style name="Button.AutoWidth" parent="@style/Button">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+    </style>
+
+    <style name="Button.AutoWidth.Solid" parent="@style/Button.AutoWidth">
+        <item name="android:textColor">@color/txt_btn_solid</item>
+        <item name="android:background">@drawable/selector_blue_corners_button</item>
+    </style>
+
+    <style name="Button.AutoWidth.SolidLight" parent="@style/Button.AutoWidth">
+        <item name="android:textColor">@color/txt_btn_solid_light</item>
+        <item name="android:background">@drawable/selector_blue_corners_button</item>
+    </style>
+
+
+
+
+    <style name="Card">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/spacing_major</item>
+    </style>
+
+    <style name="Card.NoMargin" parent="@style/Card">
+        <item name="android:layout_marginTop">0.0dp</item>
+    </style>
+
+    <style name="Card.WithDivider" parent="@style/Card">
+        <item name="android:divider">@drawable/divider_horizontal</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:dividerPadding">@dimen/spacing_major</item>
+    </style>
+
+    <style name="CardItem">
+        <item name="android:paddingLeft">@dimen/spacing_major</item>
+        <item name="android:paddingRight">@dimen/spacing_major</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- 适合文本可能有多行的item -->
+    <style name="CardItem.AutoHeight" parent="@style/CardItem">
+        <item name="android:paddingTop">15.0dip</item>
+        <item name="android:paddingBottom">15.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CardItem.FixedHeight" parent="@style/CardItem">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/cell_normal</item>
+    </style>
+
+</resources>

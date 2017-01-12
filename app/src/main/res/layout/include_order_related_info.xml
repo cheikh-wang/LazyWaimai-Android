@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            style="@style/Title.Card.WithPadding"
+            android:background="@color/dark_gray_bg"
+            android:text="@string/label_order_detail"
+            />
+
+        <LinearLayout
+            style="@style/Card.WithDivider"
+            android:layout_marginTop="0.0dip">
+
+            <LinearLayout style="@style/CardItem.FixedHeight">
+
+                <TextView
+                    style="@style/Txt.Hint"
+                    android:text="订单编号"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_order_num"
+                    style="@style/Txt.Main.Weighted"
+                    android:layout_marginLeft="@dimen/spacing_massive"
+                    tools:text="20160122160528453"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CardItem.FixedHeight">
+
+                <TextView
+                    style="@style/Txt.Hint"
+                    android:text="下单时间"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_created_at"
+                    style="@style/Txt.Main.Weighted"
+                    android:layout_marginLeft="@dimen/spacing_massive"
+                    tools:text="2016-01-22 16:06:01"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CardItem.FixedHeight">
+
+                <TextView
+                    style="@style/Txt.Hint"
+                    android:text="支付方式"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_pay_method"
+                    style="@style/Txt.Main.Weighted"
+                    android:layout_marginLeft="@dimen/spacing_massive"
+                    tools:text="在线支付"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</merge>

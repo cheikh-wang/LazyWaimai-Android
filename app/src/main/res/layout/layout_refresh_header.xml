@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="168dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/pull_backImg_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pull_back"
+            />
+
+        <ImageView
+            android:id="@+id/pull_backImg_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pull_back"
+            />
+
+        <ImageView
+            android:id="@+id/pull_sun"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@id/pull_backImg_left"
+            android:layout_marginRight="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pull_sun"
+            />
+
+        <ImageView
+            android:id="@+id/pull_rider"
+            android:layout_width="40dp"
+            android:layout_height="42dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pull_rider"
+            />
+
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="14dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            >
+
+            <ImageView
+                android:id="@+id/pull_wheel_left"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pull_wheel"
+                />
+
+            <ImageView
+                android:id="@+id/pull_wheel_right"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/pull_wheel"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:state_activated="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/primary" />
+                </shape>
+            </item>
+            <item android:left="3dp">
+                <shape>
+                    <solid android:color="@color/white_bg" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item
+        android:state_pressed="true"
+        android:drawable="@color/white_bg" />
+
+    <item
+        android:drawable="@color/dark_gray_bg" />
+
+</selector>

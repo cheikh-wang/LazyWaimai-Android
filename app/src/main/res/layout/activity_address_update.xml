@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_gray_bg">
+
+    <include layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_major"
+        android:paddingLeft="@dimen/spacing_major"
+        android:paddingRight="@dimen/spacing_major"
+        android:orientation="vertical"
+        android:background="@drawable/btn_radius_all_normal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="联系人"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text"
+                />
+
+            <EditText
+                android:id="@+id/et_input_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_normal"
+                android:hint="@string/hint_edit_name"
+                android:background="@null"
+                style="@style/Widget.LazyOrder.EditText"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke"
+            android:background="@color/divider"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_normal"
+            android:gravity="center_vertical"
+            >
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/spacing_micro"
+                    android:text="@string/label_male"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/font_normal"
+                    android:button="@drawable/sel_common_check_bg"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_major"
+                    android:layout_marginStart="@dimen/spacing_major"
+                    android:paddingLeft="@dimen/spacing_micro"
+                    android:text="@string/label_female"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/font_normal"
+                    android:button="@drawable/sel_common_check_bg"
+                    />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke"
+            android:background="@color/divider"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="联系电话"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text" />
+
+            <EditText
+                android:id="@+id/et_input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_normal"
+                android:hint="@string/hint_edit_phone"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:background="@null"
+                style="@style/Widget.LazyOrder.EditText" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="收餐地址"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text" />
+
+            <EditText
+                android:id="@+id/et_poi_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_normal"
+                android:hint="@string/hint_edit_address_summary"
+                android:background="@null"
+                style="@style/Widget.LazyOrder.EditText"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke"
+            android:background="@color/divider"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_detail_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_normal"
+                android:layout_marginLeft="80dp"
+                android:hint="@string/hint_edit_address_detail"
+                android:background="@null"
+                style="@style/Widget.LazyOrder.EditText"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:text="@string/btn_confirm_update"
+        style="@style/Widget.LazyOrder.Button"
+        />
+
+</LinearLayout>

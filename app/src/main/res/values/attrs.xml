@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SlidingTabLayout">
+        <attr name="selectedColor" format="color" />
+        <attr name="indicatorHeight" format="reference|dimension" />
+        <attr name="dividerColor" format="color" />
+        <attr name="android:textAppearance" />
+        <attr name="contentInsetStart" />
+    </declare-styleable>
+
+    <declare-styleable name="SectionView">
+        <attr name="headerText" format="string" />
+        <attr name="footerText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SectionItemView">
+        <attr name="siv_icon" format="reference" />
+        <attr name="siv_name" format="reference|string" />
+        <attr name="siv_indicator" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ProperRatingBar" >
+        <!-- Total number of ticks to show. Default is '5' -->
+        <attr name="prb_totalTicks" format="integer" />
+        <!-- Use this to set rating from xml. Default is '3' -->
+        <attr name="prb_defaultRating" format="integer" />
+        <!-- If set to 'true' - use will be able to change rating by clicking. Default is 'false' -->
+        <attr name="prb_clickable" format="boolean" />
+        <!-- Symbol to be used as a tick. Default is '$' -->
+        <attr name="prb_symbolicTick" format="string" />
+        <!-- Text size of symbolic tick. Default is '15sp' -->
+        <attr name="android:textSize" />
+        <!-- Text style of symbolic tick. Possible: 'bold', 'italic', 'normal'. Default is 'normal'. -->
+        <attr name="android:textStyle" />
+        <!-- Color of symbolic tick that is not selected (not rated). Default is '#FF000000' (black). -->
+        <attr name="prb_symbolicTickNormalColor" format="reference|color" />
+        <!-- Color of symbolic tick that is selected (rated). Default is '#FF888888' (gray). -->
+        <attr name="prb_symbolicTickSelectedColor" format="reference|color" />
+        <!-- Drawable resource to use as a tick that is not selected (not rated). No default value. -->
+        <attr name="prb_tickNormalDrawable" format="reference" />
+        <!-- Drawable resource to use as a tick that is selected (rated). No default value. -->
+        <attr name="prb_tickSelectedDrawable" format="reference" />
+        <!-- Margin to be applied to tick drawables. Only applies to drawable-type ticks. Default is '1dp' (gray). -->
+        <attr name="prb_tickSpacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiStateView">
+        <attr name="msv_loadingView" format="reference" />
+        <attr name="msv_errorView" format="reference" />
+        <attr name="msv_emptyView" format="reference" />
+        <attr name="msv_unauthView" format="reference" />
+        <attr name="msv_viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="loading" value="1" />
+            <enum name="error" value="2" />
+            <enum name="empty" value="3" />
+            <enum name="unauth" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ShoppingCountView">
+        <attr name="scv_text_color" format="color" />
+        <attr name="scv_text_size" format="dimension" />
+        <attr name="scv_add_btn_bg_color" format="color" />
+        <attr name="scv_add_btn_text_color" format="color" />
+        <attr name="scv_minus_btn_bg_color" format="color" />
+        <attr name="scv_minus_btn_text_color" format="color" />
+        <attr name="scv_space" format="dimension" />
+        <attr name="scv_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="FixWrapLayout">
+        <attr name="horizontal_spacing" format="dimension|reference" />
+        <attr name="vertical_spacing" format="dimension|reference" />
+    </declare-styleable>
+
+</resources>

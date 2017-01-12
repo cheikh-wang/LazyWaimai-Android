@@ -1,0 +1,91 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cell_larger"
+    android:orientation="horizontal"
+    android:background="@color/white_bg"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/spacing_minor"
+        android:src="@drawable/ic_address"
+        />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        >
+
+        <!-- 没有地址 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/spacing_micro"
+            android:text="@string/label_input_address"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/primary_text"
+            />
+
+        <!-- 有地址 -->
+        <RelativeLayout
+            android:id="@+id/layout_address_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white_bg"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_micro"
+                tools:text="王宏"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/primary_text"
+                />
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txt_name"
+                android:layout_toEndOf="@id/txt_name"
+                android:padding="@dimen/spacing_micro"
+                tools:text="18996480894"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/primary_text"
+                />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name"
+                android:padding="@dimen/spacing_micro"
+                tools:text="金沙江路1518弄2号近铁城市广场"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/secondary_text"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/spacing_minor"
+        android:src="@drawable/ic_arrow_right"
+        />
+
+</LinearLayout>

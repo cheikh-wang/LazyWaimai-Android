@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardItem.AutoHeight"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="12.0dip"
+    android:paddingTop="12.0dip">
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <TextView
+            style="@style/Txt.Auxiliary"
+            android:text="原价"
+            />
+
+        <TextView
+            android:id="@+id/txt_origin_price"
+            style="@style/Txt.Hint"
+            tools:text="￥70"
+            />
+
+        <TextView
+            style="@style/Txt.Auxiliary"
+            android:layout_marginLeft="@dimen/spacing_major"
+            android:text="优惠"
+            />
+
+        <TextView
+            android:id="@+id/txt_discount_price"
+            style="@style/Txt.Hint.Weighted"
+            tools:text="￥10"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/Txt.Auxiliary"
+        android:layout_marginLeft="@dimen/spacing_minor"
+        android:text="实付" />
+
+    <TextView
+        android:id="@+id/txt_total_price"
+        style="@style/Txt.EmphasizedHuge"
+        tools:text="￥60"
+        />
+
+</LinearLayout>

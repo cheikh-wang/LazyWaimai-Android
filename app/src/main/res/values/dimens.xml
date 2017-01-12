@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawer_profile_height">180dp</dimen>
+    <dimen name="avatar_width">80dp</dimen>
+    <dimen name="avatar_height">80dp</dimen>
+    <dimen name="thumb_avatar_width">50dp</dimen>
+    <dimen name="thumb_avatar_height">50dp</dimen>
+    <dimen name="business_image_width">90dp</dimen>
+    <dimen name="business_image_height">70dp</dimen>
+    <dimen name="food_photo_width">50dp</dimen>
+    <dimen name="food_photo_height">40dp</dimen>
+
+    <dimen name="divider_size">1px</dimen>
+
+    <dimen name="spacing_micro">4dp</dimen>
+    <dimen name="spacing_minor">10dp</dimen>
+    <dimen name="spacing_major">15dp</dimen>
+    <dimen name="spacing_massive">24dp</dimen>
+
+    <dimen name="font_larger">22sp</dimen>
+    <dimen name="font_large">18sp</dimen>
+    <dimen name="font_normal">15sp</dimen>
+    <dimen name="font_small">13sp</dimen>
+    <dimen name="font_smaller">12sp</dimen>
+
+    <dimen name="cell_larger">80dp</dimen>
+    <dimen name="cell_large">60dp</dimen>
+    <dimen name="cell_normal">45dp</dimen>
+    <dimen name="cell_small">30dp</dimen>
+
+    <dimen name="content_margin">8.0dp</dimen>
+    <dimen name="content_padding">13.0dp</dimen>
+
+    <dimen name="section_height">48dp</dimen>
+    <dimen name="section_space">4dp</dimen>
+
+    <dimen name="stroke">1.0px</dimen>
+
+    <dimen name="corner_radius">4.0px</dimen>
+    <dimen name="corner_large">8.0px</dimen>
+    <dimen name="corner_larger">12.0px</dimen>
+
+    <dimen name="action_bar_title_text_size">18.0sp</dimen>
+    <dimen name="action_bar_size">55.0dp</dimen>
+
+    <dimen name="wait_dialog_corner_radius">4.0px</dimen>
+
+    <dimen name="common_load_more_progress_size">30dp</dimen>
+    <dimen name="common_load_more_padding">20dp</dimen>
+    <dimen name="common_loading_progress_size">45dp</dimen>
+    <dimen name="common_loading_text_margin">10dp</dimen>
+    <dimen name="common_loading_text_lines_spacing">5dp</dimen>
+
+    <dimen name="prb_symbolic_tick_default_text_size">15sp</dimen>
+    <dimen name="prb_drawable_tick_default_spacing">1dp</dimen>
+</resources>

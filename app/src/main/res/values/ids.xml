@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="toolbar" type="id" />
+    <item name="viewpager" type="id" />
+    <item name="viewpager_tab" type="id" />
+    <item name="multi_state_view" type="id" />
+    <item name="refresh_layout" type="id" />
+    <item name="badge_view" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="recycler_view2" type="id" />
+    <item name="recycler_view3" type="id" />
+    <item name="divider" type="id" />
+    <item name="divider2" type="id" />
+    <item name="divider3" type="id" />
+    <item name="list_view" type="id" />
+    <item name="list_view2" type="id" />
+    <item name="shopping_count_view" type="id" />
+    <item name="layout_shopping_info" type="id" />
+    <item name="rating_bar" type="id" />
+    <item name="icon" type="id" />
+    <item name="title" type="id" />
+    <item name="subtitle" type="id" />
+    <item name="button" type="id" />
+
+    <item name="img_icon" type="id" />
+    <item name="img_photo" type="id" />
+    <item name="img_cart_logo" type="id" />
+    <item name="img_arrow" type="id" />
+
+    <item name="view_content" type="id" />
+
+    <item name="edit_mobile" type="id" />
+    <item name="edit_code" type="id" />
+    <item name="edit_password" type="id" />
+    <item name="edit_password_again" type="id" />
+
+    <item name="txt_red_dot" type="id" />
+    <item name="txt_icon" type="id" />
+    <item name="txt_name" type="id" />
+    <item name="txt_gender" type="id" />
+    <item name="txt_mobile" type="id" />
+    <item name="txt_address" type="id" />
+    <item name="txt_title" type="id" />
+    <item name="txt_subtitle" type="id" />
+    <item name="txt_content" type="id" />
+    <item name="txt_desc" type="id" />
+    <item name="txt_quantity" type="id" />
+    <item name="txt_first_step" type="id" />
+    <item name="txt_second_step" type="id" />
+    <item name="txt_clear" type="id" />
+    <item name="txt_third_step" type="id" />
+    <item name="txt_month_sales" type="id" />
+    <item name="txt_left_num" type="id" />
+    <item name="txt_price" type="id" />
+    <item name="txt_total_price" type="id" />
+    <item name="txt_origin_price" type="id" />
+    <item name="txt_discount_price" type="id" />
+    <item name="txt_selected_count" type="id" />
+
+    <item name="btn_reload" type="id" />
+    <item name="btn_login" type="id" />
+    <item name="btn_register" type="id" />
+    <item name="btn_settle" type="id" />
+    <item name="btn_submit" type="id" />
+    <item name="btn_delete" type="id" />
+    <item name="btn_edit" type="id" />
+    <item name="btn_send_code" type="id" />
+    <item name="btn_clear_mobile" type="id" />
+    <item name="btn_clear_code" type="id" />
+    <item name="btn_clear_password" type="id" />
+    <item name="btn_clear_password_again" type="id" />
+    <item name="btn_next" type="id" />
+    <item name="btn_add_count" type="id" />
+    <item name="btn_sub_count" type="id" />
+    <item name="btn_create_address" type="id" />
+
+    <item name="fade_state" type="id" />
+    <item name="name" type="id" />
+    <item name="mobile" type="id" />
+    <item name="address" type="id" />
+    <item name="viewpager_tabs" type="id" />
+    <item name="txt_product_name" type="id" />
+    <item name="txt_product_price" type="id" />
+    <item name="txt_product_description" type="id" />
+    <item name="txt_product_month_sales" type="id" />
+    <item name="img_product_photo" type="id" />
+    <item name="txt_product_left_num" type="id" />
+    <item name="rating_product_rate" type="id" />
+    <item name="img_product_category_icon" type="id" />
+    <item name="txt_product_category_name" type="id" />
+    <item name="txt_product_category_red_dot" type="id" />
+
+    <item name="txt_section_footer" type="id" />
+
+    <item name="img_business_photo" type="id" />
+    <item name="txt_business_name" type="id" />
+    <item name="txt_business_month_sales" type="id" />
+    <item name="txt_business_multi_content" type="id" />
+    <item name="txt_business_red_dot" type="id" />
+
+    <item name="txt_section_item_title" type="id" />
+    <item name="txt_section_item_subtitle" type="id" />
+    <item name="img_section_item_icon" type="id" />
+    <item name="img_section_item_next" type="id" />
+
+    <item name="prb_child_tag_id" type="id" />
+</resources>
