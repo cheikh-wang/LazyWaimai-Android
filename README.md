@@ -13,15 +13,16 @@
 
 ## 运行截图
 
-<img src="art/1.png" width="180" height="320"/>
-<img src="art/2.png" width="180" height="320"/>
-<img src="art/3.png" width="180" height="320"/>
-<img src="art/4.png" width="180" height="320"/>
-<img src="art/5.png" width="180" height="320"/>
-<img src="art/6.png" width="180" height="320"/>
-<img src="art/7.png" width="180" height="320"/>
-<img src="art/8.png" width="180" height="320"/>
-<img src="art/9.png" width="180" height="320"/>
+<img src="art/1.png" width="180" height="320" alt="截图1" />
+<img src="art/2.png" width="180" height="320" alt="截图2" />
+<img src="art/3.png" width="180" height="320" alt="截图3" />
+<img src="art/4.png" width="180" height="320" alt="截图4" />
+<img src="art/5.png" width="180" height="320" alt="截图5" />
+<img src="art/6.png" width="180" height="320" alt="截图6" />
+<img src="art/7.png" width="180" height="320" alt="截图7" />
+<img src="art/8.png" width="180" height="320" alt="截图8" />
+<img src="art/9.png" width="180" height="320" alt="截图9" />
+<img src="art/10.png" width="180" height="320" alt="截图10" />
 
 ## 安装方式
 1、在指定的目录下执行
@@ -30,6 +31,28 @@
 
 2、将项目导入 Android Studio 运行即可
 
+
+## 第三方库
+
+项目名称 | 项目信息
+------- | -------
+[retrofit](https://github.com/square/retrofit) | 网络请求框架
+[butterknife](https://github.com/JakeWharton/butterknife) | View注入框架
+[fresco](https://github.com/facebook/fresco) | 图片加载库
+[Dagger2](https://github.com/google/dagger) | 依赖注入框架
+[SmartTabLayout](https://github.com/ogaclejapan/SmartTabLayout) | 底部Tab组件
+[BGABadgeView-Android](https://github.com/bingoogolapple/BGABadgeView-Android) | Android 徽章控件
+[](https://github.com/crazycodeboy/TakePhoto) | 拍照或从相册选择、裁剪图片、压缩图片的开源工具库
+[RxJava](https://github.com/ReactiveX/RxJava) | 函数式编程框架
+[RxAndroid](https://github.com/ReactiveX/RxAndroid) | android平台的RxJava扩展
+[otto](https://github.com/square/otto) | 事件通信框架
+
+## TODO 
++ 修改密码
++ 修改手机
++ 修改邮箱
++ 忘记密码
++ 评价相关
 
 ###License
 <pre>
