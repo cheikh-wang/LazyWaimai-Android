@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_content"
+    style="@style/Card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/spacing_major"
+        android:paddingRight="@dimen/spacing_major"
+        >
+
+        <TextView
+            android:id="@+id/txt_business_name"
+            style="@style/Txt.Main"
+            tools:text="华莱士"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:drawablePadding="@dimen/spacing_micro"
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/txt_order_status"
+            style="@style/Txt.Main"
+            tools:text="已完成"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_major"
+        >
+
+        <include
+            layout="@layout/include_business_image" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="12.0dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_total_price"
+                style="@style/Txt.Emphasize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="￥59" />
+
+            <TextView
+                android:id="@+id/txt_created_at"
+                style="@style/Txt.AuxiliaryInfo"
+                android:layout_marginTop="@dimen/spacing_minor"
+                tools:text="2016-01-22 16:54:00"
+                />
+
+            <TextView
+                style="@style/Txt.AuxiliaryInfo"
+                android:layout_marginTop="@dimen/spacing_minor"
+                tools:text="由商家进行配送"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_major"
+        android:gravity="center_vertical|right"
+        >
+
+        <TextView
+            android:id="@+id/btn_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_major"
+            android:layout_marginTop="@dimen/spacing_major"
+            android:layout_marginBottom="@dimen/spacing_major"
+            android:text="立即评价"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/txt_blue_btn"
+            android:background="@drawable/selector_blue_border_button"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/btn_confirm_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_major"
+            android:layout_marginTop="@dimen/spacing_major"
+            android:layout_marginBottom="@dimen/spacing_major"
+            android:text="确认送达"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/txt_blue_btn"
+            android:background="@drawable/selector_blue_border_button"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/btn_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_major"
+            android:layout_marginTop="@dimen/spacing_major"
+            android:layout_marginBottom="@dimen/spacing_major"
+            android:text="立即支付"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/txt_blue_btn"
+            android:background="@drawable/selector_blue_border_button"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/btn_order_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_major"
+            android:layout_marginTop="@dimen/spacing_major"
+            android:layout_marginBottom="@dimen/spacing_major"
+            android:text="再来一单"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/txt_blue_btn"
+            android:background="@drawable/selector_blue_border_button"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

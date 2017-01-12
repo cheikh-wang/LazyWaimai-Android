@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray_bg"
+    >
+
+    <include layout="@layout/include_toolbar"
+        />
+
+    <com.cheikh.lazywaimai.widget.MultiStateView
+        android:id="@+id/multi_state_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <com.cheikh.lazywaimai.widget.refresh.RefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </com.cheikh.lazywaimai.widget.refresh.RefreshLayout>
+
+    </com.cheikh.lazywaimai.widget.MultiStateView>
+
+    <LinearLayout
+        android:id="@+id/btn_create_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/selector_common_item_bg"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size"
+            android:background="@color/divider"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/spacing_minor"
+            android:padding="@dimen/spacing_micro"
+            android:drawableLeft="@drawable/ic_add"
+            android:drawableStart="@drawable/ic_add"
+            android:drawablePadding="@dimen/spacing_micro"
+            android:text="@string/label_address_create"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/blue_text"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

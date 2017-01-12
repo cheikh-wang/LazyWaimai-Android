@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_gray_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/spacing_major"
+        android:paddingBottom="@dimen/spacing_major"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/label_step_one"
+            android:textSize="@dimen/font_normal"
+            android:textColor="?attr/colorAccent"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/label_step_tow"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/secondary_text"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/label_step_three"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/secondary_text"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:layout_margin="@dimen/spacing_major"
+        android:padding="1dp"
+        android:background="@drawable/btn_radius_all_normal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_padding"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_marginRight="@dimen/content_margin"
+            android:layout_marginTop="@dimen/content_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/login_name"
+            />
+
+        <EditText
+            android:id="@+id/edit_mobile"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/hint_edit_phone"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:background="@null"
+            style="@style/Widget.LazyOrder.EditText"
+            />
+
+        <ImageView
+            android:id="@+id/btn_clear_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/spacing_minor"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_edit_delete"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_send_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:text="@string/btn_obtain_code"
+        style="@style/Widget.LazyOrder.Button"
+        />
+
+</LinearLayout>

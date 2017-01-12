@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'bugly'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "com.cheikh.lazywaimai"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    // 不加载第三方依赖包的如下文件
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/MANIFEST'
+        exclude 'META-INF/manifest.mf'
+        exclude 'project.properties'
+        exclude 'proguard-project.txt'
+        exclude 'bin/AndroidManifest.xml'
+        exclude 'libs/android-support-v4.jar'
+        exclude 'AndroidManifest.xml'
+    }
+}
+
+bugly {
+    appId = '1a859a4b54'
+    appKey = '5bc501a6-8da3-4de0-971a-18367d47ec62'
+}
+
+def SUPPORT_VERSION = "24.2.1"
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:' + SUPPORT_VERSION
+    compile 'com.android.support:recyclerview-v7:' + SUPPORT_VERSION
+    compile 'com.android.support:design:' + SUPPORT_VERSION
+    // google工具库
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.google.code.gson:gson:2.6.1'
+    // View注入框架
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // 依赖注入框架
+    compile 'com.squareup.dagger:dagger:1.2.2'
+    apt 'com.squareup.dagger:dagger-compiler:1.2.2'
+    // 网络通信框架
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    // OKHttp的日志打印拦截器
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    // 事件总线框架
+    compile 'com.squareup:otto:1.3.8'
+    // 图片加载框架
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    // 漂亮的日志打印工具
+    compile 'com.orhanobut:logger:1.9'
+    // View注入框架
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // 动画库
+    compile 'com.nineoldandroids:library:2.4.0'
+    // 底部Tab组件
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    // 函数式编程框架
+    compile 'io.reactivex:rxjava:1.2.4'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    // 进度条
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
+    // 数字提醒
+    compile 'cn.bingoogolapple:bga-badgeview:1.0.2@aar'
+    // 底部弹出视图
+    compile 'com.flipboard:bottomsheet-core:1.5.0'
+    // 拍照或者从相册中选择图片进行裁剪
+    compile 'com.jph.takephoto:takephoto_library:2.0.4'
+    // bugly
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+}

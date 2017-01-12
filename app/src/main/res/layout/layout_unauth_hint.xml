@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_unauth"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_minor"
+        android:text="您还没有登录"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/font_normal"
+        />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_minor"
+        android:text="@string/label_click_button_to_retry"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/font_smaller"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/cell_small"
+        android:layout_marginTop="@dimen/spacing_major"
+        android:text="去登录"
+        style="@style/Widget.LazyOrder.Button"
+        />
+
+</LinearLayout>

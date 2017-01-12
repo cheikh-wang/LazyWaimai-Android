@@ -1,0 +1,14 @@
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <com.cheikh.lazywaimai.widget.PicassoImageView
+        android:id="@+id/img_photo"
+        android:layout_width="@dimen/business_image_width"
+        android:layout_height="@dimen/business_image_height"
+        tools:src="@mipmap/ic_launcher"
+        android:background="@drawable/shape_photo_bg"
+        />
+
+</merge>

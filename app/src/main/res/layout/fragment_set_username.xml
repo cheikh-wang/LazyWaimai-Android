@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:layout_margin="@dimen/spacing_major"
+        android:padding="@dimen/divider_size"
+        android:background="@drawable/btn_radius_all_normal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_padding"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_marginRight="@dimen/content_margin"
+            android:layout_marginTop="@dimen/content_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/login_name" />
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/hint_edit_username"
+            android:background="@null"
+            style="@style/Widget.LazyOrder.EditText"
+            />
+
+        <ImageView
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/spacing_major"
+            android:layout_marginRight="@dimen/spacing_major"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_edit_delete"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:layout_margin="@dimen/spacing_major"
+        android:text="@string/btn_save"
+        style="@style/Widget.LazyOrder.Button"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:layout_marginBottom="@dimen/spacing_micro"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:text="@string/label_set_user_name_first_prompt"
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/secondary_text"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:layout_marginBottom="@dimen/spacing_micro"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:text="@string/label_set_user_name_second_prompt"
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/secondary_text"
+        />
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_gray_bg"
+    >
+
+    <include layout="@layout/include_toolbar"
+        />
+
+    <com.cheikh.lazywaimai.widget.section.SectionListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_minor"
+        >
+
+        <com.cheikh.lazywaimai.widget.section.SectionExtensionItemView
+            android:id="@+id/item_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_name="@string/label_avatar"
+            app:siv_indicator="true"
+            >
+
+            <com.cheikh.lazywaimai.widget.PicassoImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="@dimen/thumb_avatar_width"
+                android:layout_height="@dimen/thumb_avatar_height"
+                tools:src="@drawable/ic_default_avatar"
+                />
+
+        </com.cheikh.lazywaimai.widget.section.SectionExtensionItemView>
+
+        <com.cheikh.lazywaimai.widget.section.SectionTextItemView
+            android:id="@+id/item_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_name="@string/label_nickname"
+            app:siv_indicator="true"
+            />
+
+        <com.cheikh.lazywaimai.widget.section.SectionTextItemView
+            android:id="@+id/item_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_name="@string/label_username"
+            app:siv_indicator="true"
+            />
+
+    </com.cheikh.lazywaimai.widget.section.SectionListView>
+
+    <com.cheikh.lazywaimai.widget.section.SectionListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_minor"
+        >
+
+        <com.cheikh.lazywaimai.widget.section.SectionTextItemView
+            android:id="@+id/item_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_name="@string/label_mobile"
+            app:siv_indicator="true"
+            />
+
+        <com.cheikh.lazywaimai.widget.section.SectionTextItemView
+            android:id="@+id/item_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_name="@string/label_email"
+            app:siv_indicator="true"
+            />
+
+        <com.cheikh.lazywaimai.widget.section.SectionTextItemView
+            android:id="@+id/item_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:siv_name="@string/label_password"
+            app:siv_indicator="true"
+            />
+
+    </com.cheikh.lazywaimai.widget.section.SectionListView>
+
+</LinearLayout>

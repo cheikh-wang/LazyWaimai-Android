@@ -1,0 +1,114 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cheikh.lazywaimai">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".context.AppContext"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.LazyOrder"
+        android:allowBackup="true"
+        tools:replace="android:icon"
+        >
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+
+        <activity
+            android:name=".ui.activity.OrderDetailActivity"
+            android:label="@string/title_order_detail"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.PaymentActivity"
+            android:label="@string/title_online_payment"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:label="@string/title_setting"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:label="@string/title_register"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="@string/title_login"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.UserProfileActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.AddressesActivity"
+            android:label="@string/title_my_addresses"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.FavoritesActivity"
+            android:label="@string/title_my_favorites"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.UpdateAddressActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.BusinessActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.SettleActivity"
+            android:label="@string/title_settle"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.RemarkActivity"
+            android:label="@string/title_remark"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activity.FeedbackActivity"
+            android:label="@string/title_feedback"
+            android:screenOrientation="portrait"
+            />
+
+    </application>
+
+</manifest>

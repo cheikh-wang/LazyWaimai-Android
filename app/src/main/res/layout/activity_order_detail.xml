@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_gray_bg"
+    >
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.cheikh.lazywaimai.widget.MultiStateView
+        android:id="@+id/multi_state_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <com.cheikh.lazywaimai.widget.refresh.RefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:fadingEdge="none"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <!-- 商品信息板块 -->
+                    <include layout="@layout/include_order_product_info" />
+
+                    <!-- 配送信息板块 -->
+                    <include layout="@layout/include_order_deliver_info" />
+
+                    <!-- 订单信息板块 -->
+                    <include layout="@layout/include_order_related_info" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.cheikh.lazywaimai.widget.refresh.RefreshLayout>
+
+    </com.cheikh.lazywaimai.widget.MultiStateView>
+
+</LinearLayout>

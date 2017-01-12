@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:paddingLeft="@dimen/spacing_major"
+        android:paddingRight="@dimen/spacing_major"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="必胜宅急送（锦秋店）"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:paddingLeft="@dimen/spacing_minor"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:background="@color/divider"
+        />
+
+    <!-- 选购的商品列表 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:background="@color/divider"
+        />
+
+    <!-- 额外的费用列表 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:background="@color/divider"
+        />
+
+    <!-- 优惠信息的列表 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_marginLeft="@dimen/spacing_major"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:background="@color/divider"
+        />
+
+    <LinearLayout
+        style="@style/CardItem.AutoHeight"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12.0dip"
+        android:paddingTop="12.0dip"
+        >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <TextView
+                style="@style/Txt.Auxiliary"
+                android:text="@string/label_origin_price"
+                />
+
+            <TextView
+                android:id="@+id/txt_origin_price"
+                style="@style/Txt.Hint"
+                tools:text="￥70"
+                />
+
+            <TextView
+                style="@style/Txt.Auxiliary"
+                android:layout_marginLeft="@dimen/spacing_major"
+                android:layout_marginStart="@dimen/spacing_major"
+                android:text="@string/label_discount"
+                />
+
+            <TextView
+                android:id="@+id/txt_discount_price"
+                style="@style/Txt.Hint.Weighted"
+                tools:text="￥10"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/Txt.Auxiliary"
+            android:layout_marginLeft="@dimen/spacing_minor"
+            android:layout_marginStart="@dimen/spacing_minor"
+            android:text="@string/label_real_payment"
+            />
+
+        <TextView
+            android:id="@+id/txt_total_price"
+            style="@style/Txt.EmphasizedHuge"
+            tools:text="￥60"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

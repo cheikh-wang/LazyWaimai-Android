@@ -1,0 +1,221 @@
+<resources>
+    <string name="app_name">懒人外卖</string>
+
+    <!-- Activity或者Fragment的标题 -->
+    <string name="title_shop">我要点餐</string>
+    <string name="title_orders">历史订单</string>
+    <string name="title_express">快递</string>
+    <string name="title_food">商品</string>
+    <string name="title_settle">订单结算</string>
+    <string name="title_remark">添加备注</string>
+    <string name="title_feedback">意见反馈</string>
+    <string name="title_order">历史订单</string>
+    <string name="title_order_detail">订单详情</string>
+    <string name="title_online_payment">在线支付</string>
+    <string name="title_comment">评价</string>
+    <string name="title_restaurant">商家</string>
+    <string name="title_login">用户登录</string>
+    <string name="title_register">用户注册</string>
+    <string name="title_user_center">个人中心</string>
+    <string name="title_user_profile">个人信息</string>
+    <string name="title_set_username">设置用户名</string>
+    <string name="title_set_nickname">设置昵称</string>
+    <string name="title_setting">设置</string>
+    <string name="title_my_addresses">我的地址</string>
+    <string name="title_my_favorites">我的收藏</string>
+    <string name="title_create_address">新增地址</string>
+    <string name="title_change_address">修改地址</string>
+
+    <string name="tab_home">主页</string>
+    <string name="tab_orders">订单</string>
+    <string name="tab_me">我的</string>
+
+    <!-- 菜单项的标题 -->
+    <string name="action_search">搜索</string>
+    <string name="action_call">拨号</string>
+    <string name="action_like">收藏</string>
+    <string name="action_setting">设置</string>
+    <string name="action_finish">完成</string>
+    <string name="action_submit">提交</string>
+
+    <!-- TextView的文本 -->
+    <string name="label_drawer_open">打开</string>
+    <string name="label_drawer_close">关闭</string>
+
+    <string name="label_empty_data">当前还没有数据</string>
+    <string name="label_empty_product_list">该商家还没有添加商品~</string>
+    <string name="label_empty_address_list">您还没有添加过地址~</string>
+
+    <string name="label_being_loading">正在加载...</string>
+    <string name="label_being_something">请稍候...</string>
+    <string name="label_being_password_update">正在修改密码,请稍候...</string>
+    <string name="label_being_login">正在登录,请稍候...</string>
+    <string name="label_being_register">正在注册,请稍候...</string>
+    <string name="label_being_address_update">正在修改地址,请稍候...</string>
+    <string name="label_being_address_create">正在新增地址,请稍候...</string>
+    <string name="label_being_simulate_payment">正在模拟支付</string>
+
+    <string name="label_error_network">网络出现错误，请稍后重试!</string>
+    <string name="label_error_network_is_bad">当前网络环境较差</string>
+    
+    <string name="label_link_forget_password">忘记密码？</string>
+    <string name="label_link_register">去注册</string>
+
+    <string name="label_input_address">请填写地址</string>
+    <string name="label_my_addresses">我的地址</string>
+    <string name="label_my_favorites">我的收藏</string>
+    <string name="label_my_evaluates">我的评价</string>
+    <string name="label_address_create">新增地址</string>
+    <string name="label_phone_update">更换手机号</string>
+    <string name="label_update_account">更改用户名</string>
+    <string name="label_update_password">修改密码</string>
+    <string name="label_check_update">检查更新</string>
+    <string name="label_feedback">意见反馈</string>
+    <string name="label_about_me">关于我们</string>
+    <string name="label_login">请登录</string>
+    <string name="label_logout">退出登录</string>
+    <string name="label_avatar">头像</string>
+    <string name="label_username">用户名</string>
+    <string name="label_nickname">昵称</string>
+    <string name="label_mobile">手机</string>
+    <string name="label_email">邮箱</string>
+    <string name="label_password">密码</string>
+
+    <string name="label_step_one">1. 输入手机号</string>
+    <string name="label_step_tow">2. 输入验证码</string>
+    <string name="label_step_three">3. 设置密码</string>
+
+    <string name="label_male">先生</string>
+    <string name="label_female">女士</string>
+    <string name="label_click_button_to_retry">点击按钮重试</string>
+    <string name="label_send_code_title">验证码短信已经发送到%1$s</string>
+    <string name="label_price">￥%1$.1f</string>
+    <string name="label_discount_price">-￥%1$.1f</string>
+    <string name="label_zero_count">0份</string>
+    <string name="label_zero_price">￥0</string>
+    <string name="label_real_payment">实付</string>
+    <string name="label_discount">优惠</string>
+    <string name="label_origin_price">原价</string>
+    <string name="label_count">%1$d份</string>
+    <string name="label_quantity">x %1$d</string>
+    <string name="label_month_sales">月售%1$d份</string>
+    <string name="label_left_count">剩余%1$d份</string>
+    <string name="label_discount_amount">已优惠￥%1$.1f</string>
+    <string name="label_total_amount">共计￥%1$.1f</string>
+    <string name="label_please_login">请先登录</string>
+    <string name="label_choose_payment_source">请选择支付渠道</string>
+    <string name="label_sold_out">已售完</string>
+    <string name="label_business_multi_content">起送 ￥%1$s   配送 ￥%2$s   平均%3$s分钟</string>
+    <string name="label_address">%1$s %2$s</string>
+    <string name="label_current_version_name">当前版本为%1$s</string>
+    <string name="label_clear">清空</string>
+    <string name="label_distance_price">还差￥%1$.1f起送</string>
+    <string name="label_online_payment">在线支付</string>
+    <string name="label_offline_payment">货到付款</string>
+    <string name="label_ali_pay">支付宝</string>
+    <string name="label_wechat_pay">微信</string>
+    <string name="label_qq_pay">QQ</string>
+    <string name="label_remark_limit_count">%1$d/200</string>
+    <string name="label_product_detail">商品信息</string>
+    <string name="label_delivery_detail">配送信息</string>
+    <string name="label_order_detail">订单信息</string>
+    <string name="label_set_user_name_first_prompt">1、用户名作为登录名一旦保存后则不可修改。</string>
+    <string name="label_set_user_name_second_prompt">2、用户名必须以字母开头, 由6—30个字母或数字组成。</string>
+
+    <!-- 吐司提示的文本 -->
+    <string name="toast_error_network">当前网络环境较差，请稍后重试!</string>
+    <string name="toast_error_not_have_network">当前没有网络，请检测设备后重试!</string>
+    <string name="toast_error_server">抱歉！服务器出错了!</string>
+    <string name="toast_error_unknown">抱歉！系统出现未知错误!</string>
+    <string name="toast_error_credentials_have_expired">您的身份认证已过期,请重新登录!</string>
+    <string name="toast_error_not_login">您当前还未登录,请先登录!</string>
+    <string name="toast_error_password_not_consistent">两次密码输入不一致</string>
+    <string name="toast_error_have_not_sd_card_to_store_photo">无法保存照片，请检查SD卡是否挂载</string>
+    <string name="toast_error_empty_data">抱歉！暂未获取到数据!</string>
+    <string name="toast_error_empty_account">账户不能为空</string>
+    <string name="toast_error_empty_password">密码不能为空</string>
+    <string name="toast_error_empty_username">用户名不能为空</string>
+    <string name="toast_error_empty_nickname">昵称不能为空</string>
+    <string name="toast_error_empty_code">验证码不能为空</string>
+    <string name="toast_error_empty_password_confirm">确认密码不能为空</string>
+    <string name="toast_error_empty_name">名字不能为空</string>
+    <string name="toast_error_empty_phone">手机号码不能为空</string>
+    <string name="toast_error_empty_address_summary">小区/学校/大楼不能为空</string>
+    <string name="toast_error_empty_address_detail">详细地址不能为空</string>
+    <string name="toast_error_not_have_more">没有更多了</string>
+    <string name="toast_error_already_set_username">您已设置过用户名</string>
+    <string name="toast_error_empty_feedback_content">请输入反馈内容</string>
+
+    <string name="toast_success_password_update">修改密码成功</string>
+    <string name="toast_success_login">登录成功</string>
+    <string name="toast_success_logout">退出登录成功</string>
+    <string name="toast_success_register">注册成功</string>
+    <string name="toast_success_address_update">修改地址成功</string>
+    <string name="toast_success_address_create">新增地址成功</string>
+    <string name="toast_success_address_delete">删除地址成功</string>
+    <string name="toast_success_send_sms_code">验证码发送成功，请注意查收</string>
+    <string name="toast_success_order_create">订单已经提交</string>
+    <string name="toast_success_online_payment">在线支付成功</string>
+    <string name="toast_success_upload_avatar">上传头像成功</string>
+    <string name="toast_success_favorite_business">收藏成功</string>
+    <string name="toast_success_cancel_favorite_business">取消收藏成功</string>
+    <string name="toast_success_set_username">设置用户名成功</string>
+    <string name="toast_success_set_nickname">设置昵称成功</string>
+    <string name="toast_success_submit_feedback">提交反馈成功</string>
+
+    <string name="toast_hint_double_click_exit">再按一次退出程序</string>
+
+    <!-- 输入框的提示文本 -->
+    <string name="hint_edit_account">用户名/手机号/邮箱</string>
+    <string name="hint_edit_password">请输入密码</string>
+    <string name="hint_edit_password_confirm">请再一次确认密码</string>
+    <string name="hint_edit_code">请输入验证码</string>
+    <string name="hint_edit_name">请输入您的名字</string>
+    <string name="hint_edit_phone">请输入您的手机号</string>
+    <string name="hint_edit_address_summary">请输入小区/学校/大楼</string>
+    <string name="hint_edit_address_detail">请输入详细地址</string>
+    <string name="hint_edit_remark">请输入备注（最多200字）</string>
+    <string name="hint_edit_username">请输入用户名</string>
+    <string name="hint_edit_nickname">请输入昵称（最多20字）</string>
+    <string name="hint_edit_feedback_content">请输入反馈内容（最多200字）</string>
+    <string name="hint_edit_contact_way">请输入您的联系方式（可选）</string>
+
+
+    <!-- 按钮的文本 -->
+    <string name="btn_sure">确定</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_send_code">发送验证码</string>
+    <string name="btn_again_send_code">重新发送</string>
+    <string name="btn_obtain_code">获取验证码</string>
+    <string name="btn_submit_code">提交验证码</string>
+    <string name="btn_send_code_again">等待%1$d秒</string>
+    <string name="btn_login">登录</string>
+    <string name="btn_verify_mobile">验证手机号</string>
+    <string name="btn_register">注册</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_settle">去结算</string>
+    <string name="btn_go_login">去登录</string>
+    <string name="btn_confirm_order">确认下单</string>
+    <string name="btn_confirm_update">确认修改</string>
+    <string name="btn_confirm_create">确认添加</string>
+    <string name="btn_payment">立即支付</string>
+    <string name="btn_reload">重新加载</string>
+
+    <!-- 对话框的文本 -->
+    <string name="dialog_delete_title">确认删除？</string>
+    <string name="dialog_delete_message">你确定要删除？一旦删除将不可恢复</string>
+    <string name="dialog_logout_title">确认退出？</string>
+    <string name="dialog_logout_message">你确定要退出登录？</string>
+    <string name="dialog_shopping_cart_business_conflict_title">购物车商铺冲突？</string>
+    <string name="dialog_shopping_cart_business_conflict_message">购物车里已有其他店铺的商品了,请先清空</string>
+    <string name="dialog_clear_shopping_cart_title">是否清空购物车？</string>
+    <string name="dialog_clear_shopping_cart_message">你确认清空购物车?一旦清空将不可恢复</string>
+    <string name="dialog_update_avatar_title">更换头像</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_confirm">确定</string>
+    <string name="dialog_clear">清空</string>
+
+
+    <string name="prb_default_symbolic_string">$</string>
+
+</resources>

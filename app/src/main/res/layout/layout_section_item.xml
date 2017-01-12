@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/selector_common_item_bg">
+
+    <ImageView
+        android:id="@+id/img_section_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_minor"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/txt_section_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_minor"
+        android:layout_toRightOf="@id/img_section_item_icon"
+        android:layout_centerVertical="true"
+        android:textSize="16.0sp"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/txt_section_item_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_minor"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="14.0sp"
+        android:textColor="?android:attr/textColorSecondary"/>
+
+    <ImageView
+        android:id="@+id/img_section_item_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_minor"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_right" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stroke"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/divider" />
+
+</RelativeLayout>

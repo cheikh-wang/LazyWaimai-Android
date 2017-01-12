@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.cheikh.lazywaimai.widget.PicassoImageView
+        android:id="@+id/img_product_photo"
+        android:layout_width="@dimen/food_photo_width"
+        android:layout_height="@dimen/food_photo_height"
+        android:layout_margin="@dimen/spacing_minor"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_product_photo"
+        android:layout_toEndOf="@id/img_product_photo"
+        android:layout_margin="@dimen/spacing_minor"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/txt_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#464646"
+            />
+
+        <TextView
+            android:id="@+id/txt_product_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#8D8D8D"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.cheikh.lazywaimai.widget.ProperRatingBar
+                android:id="@+id/rating_product_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                app:prb_totalTicks="5"
+                app:prb_defaultRating="4"
+                app:prb_symbolicTick="✩"
+                app:prb_symbolicTickNormalColor="@color/secondary_text"
+                app:prb_symbolicTickSelectedColor="@color/primary"
+                />
+
+            <TextView
+                android:id="@+id/txt_product_month_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_minor"
+                android:layout_toRightOf="@id/rating_product_rate"
+                android:textSize="12sp"
+                android:textColor="#CBCBCB"
+                />
+
+            <TextView
+                android:id="@+id/txt_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_product_rate"
+                android:textSize="14sp"
+                android:textColor="@color/orange"
+                />
+
+            <TextView
+                android:id="@+id/txt_product_left_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txt_product_price"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:textColor="@color/secondary_text"
+                />
+
+            <com.cheikh.lazywaimai.widget.ShoppingCountView
+                android:id="@+id/shopping_count_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txt_product_price"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                app:scv_add_btn_bg_color="?attr/colorPrimary"
+                app:scv_add_btn_text_color="@color/white"
+                app:scv_minus_btn_bg_color="@color/white"
+                app:scv_minus_btn_text_color="?attr/colorPrimary"
+                android:visibility="visible"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider"
+        />
+
+</RelativeLayout>

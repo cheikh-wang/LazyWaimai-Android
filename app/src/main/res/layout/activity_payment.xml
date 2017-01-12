@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_gray_bg"
+    >
+
+    <include layout="@layout/include_toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_minor"
+        android:text="@string/label_choose_payment_source"
+        android:textSize="@dimen/font_normal"
+        android:textColor="@color/gray"
+        android:background="@color/dark_gray_bg"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_payment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_normal"
+        android:layout_marginTop="@dimen/spacing_massive"
+        android:layout_marginLeft="@dimen/spacing_minor"
+        android:layout_marginRight="@dimen/spacing_minor"
+        android:text="@string/btn_payment"
+        style="@style/Widget.LazyOrder.Button"
+        />
+
+</LinearLayout>

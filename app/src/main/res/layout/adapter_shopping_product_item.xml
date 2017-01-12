@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/spacing_minor"
+    android:paddingLeft="@dimen/spacing_major"
+    android:paddingRight="@dimen/spacing_minor"
+    android:paddingBottom="@dimen/spacing_minor"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="农家小炒肉"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/font_normal"
+        />
+
+    <TextView
+        android:id="@+id/txt_quantity"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_major"
+        android:paddingRight="@dimen/spacing_major"
+        tools:text="x 1"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/font_normal"
+        />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="60dp"
+        tools:text="￥14.5"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/font_normal"
+        />
+
+</LinearLayout>

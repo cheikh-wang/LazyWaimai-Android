@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_gray_bg"
+    >
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.cheikh.lazywaimai.widget.MultiStateView
+        android:id="@+id/multi_state_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_major"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+                    <!-- 地址板块 -->
+                    <com.cheikh.lazywaimai.widget.AddressView
+                        android:id="@+id/view_address_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_major"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+
+                    <!-- 付款方式板块 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/white_bg"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_online_payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_major"
+                            android:drawableRight="@drawable/ic_check_on"
+                            android:text="@string/label_online_payment"
+                            android:textSize="@dimen/font_normal"
+                            android:textColor="@color/orange"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_size"
+                            android:layout_marginLeft="@dimen/spacing_minor"
+                            android:layout_marginRight="@dimen/spacing_minor"
+                            android:background="@color/divider"
+                            />
+
+                        <TextView
+                            android:id="@+id/txt_offline_payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_major"
+                            android:drawableRight="@drawable/ic_check_off"
+                            android:text="@string/label_offline_payment"
+                            android:textSize="@dimen/font_normal"
+                            android:textColor="@color/primary_text"
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_major"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+                    <!-- 送达时间、备注、红包板块 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/white_bg"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout_send_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/cell_normal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/spacing_major"
+                                android:text="送达时间"
+                                android:textSize="@dimen/font_normal"
+                                android:textColor="@color/primary_text"
+                                />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_booked_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_minor"
+                                tools:text="立即送达"
+                                android:textSize="@dimen/font_normal"
+                                android:textColor="@color/primary_text"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/spacing_minor"
+                                android:src="@drawable/ic_arrow_right"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_size"
+                            android:layout_marginLeft="@dimen/spacing_minor"
+                            android:layout_marginRight="@dimen/spacing_minor"
+                            android:background="@color/divider"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/layout_remark"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/cell_normal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/spacing_major"
+                                android:text="订单备注"
+                                android:textSize="@dimen/font_normal"
+                                android:textColor="@color/primary_text"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_remark"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/spacing_minor"
+                                android:maxLines="1"
+                                android:gravity="right"
+                                android:text="点击添加备注"
+                                android:textSize="@dimen/font_normal"
+                                android:textColor="@color/gray"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/spacing_minor"
+                                android:src="@drawable/ic_arrow_right"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_major"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+                    <com.cheikh.lazywaimai.widget.OrderReportView
+                        android:id="@+id/orderReportView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size"
+                        android:background="@color/divider"
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_major"
+                        />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_minor"
+                android:orientation="vertical"
+                android:background="@color/white"
+                >
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_submit_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:enabled="false"
+                    android:text="@string/btn_confirm_order"
+                    style="@style/Widget.LazyOrder.Button"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.cheikh.lazywaimai.widget.MultiStateView>
+
+</LinearLayout>
