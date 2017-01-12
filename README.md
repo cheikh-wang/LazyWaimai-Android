@@ -42,7 +42,7 @@
 [Dagger2](https://github.com/google/dagger) | 依赖注入框架
 [SmartTabLayout](https://github.com/ogaclejapan/SmartTabLayout) | 底部Tab组件
 [BGABadgeView-Android](https://github.com/bingoogolapple/BGABadgeView-Android) | Android 徽章控件
-[](https://github.com/crazycodeboy/TakePhoto) | 拍照或从相册选择、裁剪图片、压缩图片的开源工具库
+[TakePhoto](https://github.com/crazycodeboy/TakePhoto) | 拍照或从相册选择、裁剪图片、压缩图片的开源工具库
 [RxJava](https://github.com/ReactiveX/RxJava) | 函数式编程框架
 [RxAndroid](https://github.com/ReactiveX/RxAndroid) | android平台的RxJava扩展
 [otto](https://github.com/square/otto) | 事件通信框架
