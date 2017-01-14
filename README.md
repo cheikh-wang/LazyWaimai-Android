@@ -23,6 +23,9 @@
 <img src="art/8.png" width="180" height="320" alt="截图8" />
 <img src="art/9.png" width="180" height="320" alt="截图9" />
 <img src="art/10.png" width="180" height="320" alt="截图10" />
+<img src="art/11.png" width="180" height="320" alt="截图10" />
+<img src="art/12.png" width="180" height="320" alt="截图10" />
+<img src="art/13.png" width="180" height="320" alt="截图10" />
 
 ## 安装方式
 1、在指定的目录下执行
