@@ -13,19 +13,11 @@
 
 ## 运行截图
 
-<img src="art/1.png" width="180" height="320" alt="截图1" />
-<img src="art/2.png" width="180" height="320" alt="截图2" />
-<img src="art/3.png" width="180" height="320" alt="截图3" />
-<img src="art/4.png" width="180" height="320" alt="截图4" />
-<img src="art/5.png" width="180" height="320" alt="截图5" />
-<img src="art/6.png" width="180" height="320" alt="截图6" />
-<img src="art/7.png" width="180" height="320" alt="截图7" />
-<img src="art/8.png" width="180" height="320" alt="截图8" />
-<img src="art/9.png" width="180" height="320" alt="截图9" />
-<img src="art/10.png" width="180" height="320" alt="截图10" />
-<img src="art/11.png" width="180" height="320" alt="截图10" />
-<img src="art/12.png" width="180" height="320" alt="截图10" />
-<img src="art/13.png" width="180" height="320" alt="截图10" />
+<img src="art/gif/1.gif" width="360" height="640" alt="截图1" />
+<img src="art/gif/2.gif" width="360" height="640" alt="截图2" />
+<img src="art/gif/3.gif" width="360" height="640" alt="截图3" />
+<img src="art/gif/4.gif" width="360" height="640" alt="截图4" />
+<img src="art/gif/5.gif" width="360" height="640" alt="截图5" />
 
 ## 安装方式
 1、在指定的目录下执行
