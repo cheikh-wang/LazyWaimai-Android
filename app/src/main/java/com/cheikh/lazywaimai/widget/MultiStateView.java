@@ -14,10 +14,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
 import com.cheikh.lazywaimai.R;
 
 /**

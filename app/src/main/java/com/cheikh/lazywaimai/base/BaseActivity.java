@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v7.widget.Toolbar;
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.util.ContentView;
 import com.cheikh.lazywaimai.ui.Display;
@@ -16,7 +17,7 @@ import com.cheikh.lazywaimai.widget.LoadingDialog;
  * author: cheikh.wang on 17/1/5
  * email: wanghonghi@126.com
  */
-public abstract class BaseActivity<UC> extends BaseUiActivity<UC> {
+public abstract class BaseActivity<UC> extends CoreActivity<UC> {
 
     @Nullable
     @Bind(R.id.toolbar)
@@ -28,6 +29,7 @@ public abstract class BaseActivity<UC> extends BaseUiActivity<UC> {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        ButterKnife.bind(this);
         initialToolbar();
         handleIntent(getIntent(), getDisplay());
         initialViews(savedInstanceState);
@@ -37,6 +39,12 @@ public abstract class BaseActivity<UC> extends BaseUiActivity<UC> {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         handleIntent(intent, getDisplay());
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        ButterKnife.unbind(this);
     }
 
     protected int getLayoutId() {

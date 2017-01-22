@@ -3,6 +3,8 @@ package com.cheikh.lazywaimai.context;
 import android.app.Application;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
+import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.RefWatcher;
 import com.tencent.bugly.crashreport.CrashReport;
 import java.io.File;
 import javax.inject.Inject;
@@ -22,6 +24,7 @@ public class AppContext extends Application implements Injector {
     private static AppContext mInstance;
 
     private ObjectGraph mObjectGraph;
+    private RefWatcher mRefWatcher;
 
     @Inject
     MainController mMainController;
@@ -32,6 +35,10 @@ public class AppContext extends Application implements Injector {
 
     public static AppContext getContext() {
         return mInstance;
+    }
+
+    public RefWatcher getRefWatcher() {
+        return mRefWatcher;
     }
 
     public MainController getMainController() {
@@ -54,6 +61,9 @@ public class AppContext extends Application implements Injector {
 
         // bugly初始化
         CrashReport.initCrashReport(this, "1a859a4b54", false);
+
+        // LeakCanary
+        mRefWatcher = LeakCanary.install(this);
 
         // 依赖注解初始化
         mObjectGraph = ObjectGraph.create(

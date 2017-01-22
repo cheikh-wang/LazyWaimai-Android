@@ -12,23 +12,18 @@ import android.view.ViewGroup;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.cheikh.lazywaimai.R;
-import com.cheikh.lazywaimai.model.bean.ResponseError;
 import com.cheikh.lazywaimai.util.ContentView;
-import com.cheikh.lazywaimai.ui.Display;
 import com.cheikh.lazywaimai.widget.LoadingDialog;
 
 /**
  * author: cheikh.wang on 16/11/23
  * email: wanghonghi@126.com
  */
-public abstract class BaseFragment<UC> extends Fragment
-        implements BaseController.Ui<UC> {
+public abstract class BaseFragment<UC> extends CoreFragment<UC> {
 
     @Nullable
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
-
-    private UC mCallbacks;
 
     private LoadingDialog mLoading;
 
@@ -46,21 +41,9 @@ public abstract class BaseFragment<UC> extends Fragment
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getController().attachUi(this);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        getController().startUi(this);
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        getController().detachUi(this);
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 
     protected int getLayoutResId() {
@@ -87,25 +70,6 @@ public abstract class BaseFragment<UC> extends Fragment
     protected void handleArguments(Bundle arguments) {}
 
     protected void initialViews(Bundle savedInstanceState) {}
-
-    @Override
-    public UC getCallbacks() {
-        return mCallbacks;
-    }
-
-    @Override
-    public void setCallbacks(UC callbacks) {
-        mCallbacks = callbacks;
-    }
-
-    @Override
-    public void onResponseError(ResponseError error) {}
-
-    protected abstract BaseController getController();
-
-    protected Display getDisplay() {
-        return ((BaseActivity) getActivity()).getDisplay();
-    }
 
     protected Toolbar getToolbar() {
         return mToolbar;

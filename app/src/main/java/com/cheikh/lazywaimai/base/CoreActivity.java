@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import butterknife.ButterKnife;
 import com.cheikh.lazywaimai.context.AppContext;
 import com.cheikh.lazywaimai.controller.MainController;
 import com.cheikh.lazywaimai.model.bean.ResponseError;
@@ -15,7 +14,7 @@ import com.cheikh.lazywaimai.util.ActivityStack;
  * author: cheikh.wang on 17/1/5
  * email: wanghonghi@126.com
  */
-public abstract class BaseUiActivity<UC> extends AppCompatActivity
+public abstract class CoreActivity<UC> extends AppCompatActivity
         implements BaseController.Ui<UC> {
 
     private MainController mMainController;
@@ -30,7 +29,6 @@ public abstract class BaseUiActivity<UC> extends AppCompatActivity
         mDisplay = new Display(this);
         mMainController = AppContext.getContext().getMainController();
 
-        ButterKnife.bind(this);
         getController().attachUi(this);
         ActivityStack.create().add(this);
     }
@@ -38,9 +36,9 @@ public abstract class BaseUiActivity<UC> extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        getController().startUi(this);
         mMainController.init();
         mMainController.attachDisplay(mDisplay);
+        getController().startUi(this);
     }
 
     @Override
@@ -53,9 +51,9 @@ public abstract class BaseUiActivity<UC> extends AppCompatActivity
     @Override
     public void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
         getController().detachUi(this);
         ActivityStack.create().remove(this);
+        AppContext.getContext().getRefWatcher().watch(this);
     }
 
     protected abstract int getLayoutId();
