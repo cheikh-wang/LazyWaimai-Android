@@ -1,12 +1,12 @@
 package com.cheikh.lazywaimai.ui.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseActivity;
@@ -15,6 +15,7 @@ import com.cheikh.lazywaimai.context.AppContext;
 import com.cheikh.lazywaimai.controller.OrderController;
 import com.cheikh.lazywaimai.ui.Display;
 import com.cheikh.lazywaimai.util.ContentView;
+import com.cheikh.lazywaimai.widget.FixWrapLayout;
 import java.util.List;
 import butterknife.Bind;
 import butterknife.OnTextChanged;
@@ -34,13 +35,28 @@ public class RemarkActivity extends BaseActivity<OrderController.OrderUiCallback
     TextView mContentCountTxt;
 
     @Bind(R.id.layout_common_remarks)
-    LinearLayout mCommonRemarksLayout;
+    FixWrapLayout mCommonRemarksLayout;
 
     private MenuItem mFinishMenuItem;
+
+    private String mRemark;
 
     @Override
     protected BaseController getController() {
         return AppContext.getContext().getMainController().getOrderController();
+    }
+
+    @Override
+    protected void handleIntent(Intent intent, Display display) {
+        mRemark = intent.getStringExtra(Display.PARAM_OBJ);
+    }
+
+    @Override
+    protected void initialViews(Bundle savedInstanceState) {
+        if (!TextUtils.isEmpty(mRemark)) {
+            mContentEdit.setText(mRemark);
+            mContentEdit.setSelection(mRemark.length());
+        }
     }
 
     @Override
@@ -55,7 +71,9 @@ public class RemarkActivity extends BaseActivity<OrderController.OrderUiCallback
     }
 
     private void updateFinishMenuItemState(boolean enable) {
-        mFinishMenuItem.setEnabled(enable);
+        if (mFinishMenuItem != null) {
+            mFinishMenuItem.setEnabled(enable);
+        }
     }
 
     @OnTextChanged(R.id.edit_content)
@@ -80,6 +98,7 @@ public class RemarkActivity extends BaseActivity<OrderController.OrderUiCallback
         sb.append((String) view.getTag());
 
         mContentEdit.setText(sb.toString());
+        mContentEdit.setSelection(sb.length());
     }
 
     @Override

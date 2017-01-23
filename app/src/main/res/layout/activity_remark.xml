@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/dark_gray_bg"
-    >
+    android:background="@color/dark_gray_bg">
 
     <include layout="@layout/include_toolbar" />
 
@@ -66,6 +65,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/spacing_minor"
+        android:paddingBottom="@dimen/spacing_minor"
+        android:paddingLeft="@dimen/spacing_major"
+        android:paddingRight="@dimen/spacing_major"
         android:orientation="vertical"
         android:background="@color/white"
         >
@@ -73,22 +76,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_minor"
-            android:layout_marginBottom="@dimen/spacing_minor"
-            android:layout_marginLeft="@dimen/spacing_major"
-            android:layout_marginRight="@dimen/spacing_major"
-            android:text="常用备注"
+            android:text="@string/label_common_remark"
             android:textSize="@dimen/font_normal"
             android:textColor="@color/primary_text"
             />
 
-        <LinearLayout
+        <com.cheikh.lazywaimai.widget.FixWrapLayout
             android:id="@+id/layout_common_remarks"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_minor"
+            app:horizontal_spacing="8dp"
+            app:vertical_spacing="8dp"
             />
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider"
+        />
 
 </LinearLayout>

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.cheikh.lazywaimai.model.bean.Order;
 import com.cheikh.lazywaimai.ui.activity.FavoritesActivity;
 import com.cheikh.lazywaimai.ui.activity.FeedbackActivity;
+import com.cheikh.lazywaimai.ui.activity.RemarkActivity;
 import com.cheikh.lazywaimai.ui.fragment.SetNicknameFragment;
 import com.cheikh.lazywaimai.ui.fragment.SetUsernameFragment;
 import com.cheikh.lazywaimai.ui.fragment.UserProfileFragment;
@@ -178,6 +179,12 @@ public class Display {
     public void showUserProfile() {
         Intent intent = new Intent(mActivity, UserProfileActivity.class);
         mActivity.startActivity(intent);
+    }
+
+    public void showRemark(String remark, int requestCode) {
+        Intent intent = new Intent(mActivity, RemarkActivity.class);
+        intent.putExtra(PARAM_OBJ, remark);
+        mActivity.startActivityForResult(intent, requestCode);
     }
 
     public void showPayment(Order order) {

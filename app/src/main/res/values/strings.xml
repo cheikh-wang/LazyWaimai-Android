@@ -80,11 +80,9 @@
     <string name="label_mobile">手机</string>
     <string name="label_email">邮箱</string>
     <string name="label_password">密码</string>
-
     <string name="label_step_one">1. 输入手机号</string>
     <string name="label_step_tow">2. 输入验证码</string>
     <string name="label_step_three">3. 设置密码</string>
-
     <string name="label_male">先生</string>
     <string name="label_female">女士</string>
     <string name="label_click_button_to_retry">点击按钮重试</string>
@@ -110,6 +108,7 @@
     <string name="label_current_version_name">当前版本为%1$s</string>
     <string name="label_clear">清空</string>
     <string name="label_distance_price">还差￥%1$.1f起送</string>
+    <string name="label_common_remark">常用备注</string>
     <string name="label_online_payment">在线支付</string>
     <string name="label_offline_payment">货到付款</string>
     <string name="label_ali_pay">支付宝</string>

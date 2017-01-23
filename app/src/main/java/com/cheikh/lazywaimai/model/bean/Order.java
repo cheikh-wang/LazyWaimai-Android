@@ -44,6 +44,9 @@ public class Order implements Serializable {
     @SerializedName("pay_method")
     PayMethod payMethod;
 
+    @SerializedName("remark")
+    String remark;
+
     @SerializedName("order_num")
     String orderNum;
 
@@ -155,6 +158,14 @@ public class Order implements Serializable {
 
     public void setPayMethod(PayMethod payMethod) {
         this.payMethod = payMethod;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setmRemark(String remark) {
+        this.remark = remark;
     }
 
     public String getOrderNum() {

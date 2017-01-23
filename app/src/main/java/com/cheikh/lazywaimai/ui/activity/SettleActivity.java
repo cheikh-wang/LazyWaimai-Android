@@ -38,6 +38,8 @@ import com.cheikh.lazywaimai.widget.OrderReportView;
 public class SettleActivity extends BaseActivity<OrderController.OrderUiCallbacks>
         implements OrderController.OrderSettleUi {
 
+    public static final int REQUEST_CODE_REMARK = 1000;
+
     @Bind(R.id.multi_state_view)
     MultiStateView mMultiStateView;
 
@@ -197,8 +199,7 @@ public class SettleActivity extends BaseActivity<OrderController.OrderUiCallback
                 popupChooseBookedTime(mCheckedSendTimeIndex);
                 break;
             case R.id.layout_remark:
-                Intent intent = new Intent(this, RemarkActivity.class);
-                startActivityForResult(intent, 1000);
+                getCallbacks().showRemark(mRemark, REQUEST_CODE_REMARK);
                 break;
         }
     }
@@ -206,7 +207,7 @@ public class SettleActivity extends BaseActivity<OrderController.OrderUiCallback
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1000 && resultCode == RESULT_OK) {
+        if (requestCode == REQUEST_CODE_REMARK && resultCode == RESULT_OK) {
             mRemark = data.getStringExtra(Display.PARAM_OBJ);
             mRemarkTxt.setText(mRemark);
         }

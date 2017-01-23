@@ -2,6 +2,7 @@ package com.cheikh.lazywaimai.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -56,6 +57,9 @@ public class OrderDetailActivity extends BaseActivity<OrderController.OrderUiCal
 
     @Bind(R.id.txt_order_num)
     TextView mOrderNumTxt;
+
+    @Bind(R.id.txt_remark)
+    TextView mOrderRemarkTxt;
 
     @Bind(R.id.txt_created_at)
     TextView mCreateAtTxt;
@@ -112,6 +116,7 @@ public class OrderDetailActivity extends BaseActivity<OrderController.OrderUiCal
         mDeliverAddressTxt.setText(order.getAddress());
         // 订单信息
         mOrderNumTxt.setText(String.valueOf(order.getOrderNum()));
+        mOrderRemarkTxt.setText(!TextUtils.isEmpty(order.getRemark()) ? order.getRemark() : "无");
         mCreateAtTxt.setText(DateUtil.DateToString(new Date(order.getCreatedAt()), DateUtil.DateStyle.YYYY_MM_DD_HH_MM));
         mPayMethodTxt.setText(order.getPayMethod().getName());
     }

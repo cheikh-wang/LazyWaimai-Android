@@ -324,6 +324,14 @@ public class OrderController extends BaseController<OrderController.OrderUi, Ord
             }
 
             @Override
+            public void showRemark(String remark, int requestCode) {
+                Display display = getDisplay();
+                if (display != null) {
+                    display.showRemark(remark, requestCode);
+                }
+            }
+
+            @Override
             public void showPayment(Order order) {
                 Display display = getDisplay();
                 if (display != null) {
@@ -398,6 +406,8 @@ public class OrderController extends BaseController<OrderController.OrderUi, Ord
         void orderCreate(String cartId, long bookedAt, String remark);
 
         void togglePayMethod(boolean isOnlinePayment);
+
+        void showRemark(String remark, int requestCode);
 
         void showPayment(Order order);
 
