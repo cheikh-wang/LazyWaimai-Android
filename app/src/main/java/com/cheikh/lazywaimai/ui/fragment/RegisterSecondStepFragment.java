@@ -79,7 +79,10 @@ public class RegisterSecondStepFragment extends BaseFragment<UserController.User
         mSendCodeBtn.setOnCountDownListener(new CountDownTimerView.OnCountDownListener() {
             @Override
             public boolean onCountDownFinishState() {
-                return !TextUtils.isEmpty(mCodeEdit.getText().toString());
+                if (mCodeEdit != null) {
+                    return !TextUtils.isEmpty(mCodeEdit.getText().toString());
+                }
+                return false;
             }
         });
         mSendCodeBtn.countDown(30000);
