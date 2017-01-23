@@ -110,12 +110,7 @@ public class DefaultRefreshHeaderView extends BaseRefreshHeaderView {
 
     @Override
     public void onBegin() {
-        sunImg.startAnimation(sunRotation);
-        riderImg.startAnimation(riderShake);
-        leftWheelImg.startAnimation(wheelRotation);
-        rightWheelImg.startAnimation(wheelRotation);
-        leftBackImg.startAnimation(leftBackTranslate);
-        rightBackImg.startAnimation(rightBackTranslate);
+
     }
 
     @Override
@@ -130,7 +125,12 @@ public class DefaultRefreshHeaderView extends BaseRefreshHeaderView {
 
     @Override
     public void onRefreshing() {
-
+        sunImg.startAnimation(sunRotation);
+        riderImg.startAnimation(riderShake);
+        leftWheelImg.startAnimation(wheelRotation);
+        rightWheelImg.startAnimation(wheelRotation);
+        leftBackImg.startAnimation(leftBackTranslate);
+        rightBackImg.startAnimation(rightBackTranslate);
     }
 
     @Override
