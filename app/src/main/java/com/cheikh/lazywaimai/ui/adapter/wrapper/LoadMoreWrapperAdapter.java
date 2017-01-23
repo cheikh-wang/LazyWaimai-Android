@@ -10,6 +10,7 @@ import com.cheikh.lazywaimai.base.BaseWrapperAdapter;
 /**
  * author: cheikh.wang on 16/12/27
  * email: wanghonghi@126.com
+ * 修改至: http://blog.csdn.net/lmj623565791/article/details/51854533
  */
 public class LoadMoreWrapperAdapter<T> extends BaseWrapperAdapter<T> {
 
