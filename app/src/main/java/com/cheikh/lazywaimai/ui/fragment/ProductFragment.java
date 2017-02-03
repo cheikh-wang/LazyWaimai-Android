@@ -99,7 +99,7 @@ public class ProductFragment extends BaseFragment<BusinessController.BusinessUiC
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mShoppingCartPanel = new ShoppingCartPanel(getContext());
 
         // 商品分类的列表

@@ -64,7 +64,7 @@ public class UserCenterFragment extends BaseFragment<UserController.UserUiCallba
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         setHasOptionsMenu(true);
     }
 

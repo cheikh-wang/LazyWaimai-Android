@@ -29,7 +29,7 @@ public abstract class BaseTabFragment<UC> extends BaseFragment<UC> {
     private int mCurrentItem;
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mAdapter = new TabPagerAdapter(getChildFragmentManager());
 
         mViewPager.setAdapter(mAdapter);

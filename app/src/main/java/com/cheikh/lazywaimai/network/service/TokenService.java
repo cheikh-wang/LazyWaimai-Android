@@ -1,7 +1,6 @@
 package com.cheikh.lazywaimai.network.service;
 
 import java.util.Map;
-
 import retrofit2.http.POST;
 import retrofit2.http.QueryMap;
 import rx.Observable;

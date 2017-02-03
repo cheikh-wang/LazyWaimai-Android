@@ -33,7 +33,7 @@ public abstract class BaseListFragment<T, UC> extends BaseFragment<UC>
     protected LoadMoreWrapperAdapter<T> mAdapter;
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mRefreshLayout.setEnabled(getEnableRefresh());
         mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override

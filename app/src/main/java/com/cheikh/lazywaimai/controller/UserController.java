@@ -102,6 +102,7 @@ public class UserController extends BaseController<UserController.UserUi, UserCo
         mPageIndex = 1;
         doFetchFavorites(getId(ui), mPageIndex, PAGE_SIZE);
     }
+
     /**
      * 注册的第1个步骤:发送短信验证码
      * @param callingId

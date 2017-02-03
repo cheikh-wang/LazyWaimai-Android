@@ -1,7 +1,5 @@
 package com.cheikh.lazywaimai.network.service;
 
-import java.util.List;
-import java.util.Map;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -9,12 +7,9 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-import retrofit2.http.QueryMap;
 import rx.Observable;
-
 import com.cheikh.lazywaimai.model.bean.Favorite;
 import com.cheikh.lazywaimai.model.bean.ResultsPage;
-import com.cheikh.lazywaimai.model.bean.Token;
 import com.cheikh.lazywaimai.model.bean.User;
 
 
@@ -48,14 +43,6 @@ public interface AccountService {
     @FormUrlEncoded
     @POST("users?action=create_user")
     Observable<Boolean> register(@Field("mobile") String mobile, @Field("password") String password);
-
-    /**
-     * 用户登录
-     * @param params
-     * @return
-     */
-    @POST("oauth/access_token")
-    Observable<Token> login(@QueryMap Map<String, String> params);
 
     /**
      * 获取用户资料

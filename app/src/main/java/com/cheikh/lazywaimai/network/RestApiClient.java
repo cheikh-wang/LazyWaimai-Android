@@ -85,7 +85,7 @@ public class RestApiClient {
     }
 
     private Retrofit getRetrofit() {
-        if(mRetrofit == null) {
+        if (mRetrofit == null) {
             Retrofit.Builder builder = new Retrofit.Builder();
             builder.client(newRetrofitClient());
             builder.baseUrl(AppConfig.SERVER_URL);

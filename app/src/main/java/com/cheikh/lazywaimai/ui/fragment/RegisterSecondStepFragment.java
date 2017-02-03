@@ -74,15 +74,12 @@ public class RegisterSecondStepFragment extends BaseFragment<UserController.User
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mTitleTxt.setText(getString(R.string.label_send_code_title, mMobile));
         mSendCodeBtn.setOnCountDownListener(new CountDownTimerView.OnCountDownListener() {
             @Override
             public boolean onCountDownFinishState() {
-                if (mCodeEdit != null) {
-                    return !TextUtils.isEmpty(mCodeEdit.getText().toString());
-                }
-                return false;
+                return mCodeEdit != null && !TextUtils.isEmpty(mCodeEdit.getText().toString());
             }
         });
         mSendCodeBtn.countDown(30000);

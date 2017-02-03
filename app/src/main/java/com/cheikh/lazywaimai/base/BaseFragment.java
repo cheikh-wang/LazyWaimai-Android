@@ -37,7 +37,7 @@ public abstract class BaseFragment<UC> extends CoreFragment<UC> {
         ButterKnife.bind(this, view);
         initialToolbar();
         handleArguments(getArguments());
-        initialViews(savedInstanceState);
+        initializeViews(savedInstanceState);
     }
 
     @Override
@@ -69,7 +69,7 @@ public abstract class BaseFragment<UC> extends CoreFragment<UC> {
 
     protected void handleArguments(Bundle arguments) {}
 
-    protected void initialViews(Bundle savedInstanceState) {}
+    protected void initializeViews(Bundle savedInstanceState) {}
 
     protected Toolbar getToolbar() {
         return mToolbar;
