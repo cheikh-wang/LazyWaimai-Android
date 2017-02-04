@@ -30,9 +30,9 @@ public abstract class BaseActivity<UC> extends CoreActivity<UC> {
         super.onCreate(savedInstanceState);
 
         ButterKnife.bind(this);
-        initialToolbar();
+        initializeToolbar();
         handleIntent(getIntent(), getDisplay());
-        initialViews(savedInstanceState);
+        initializeViews(savedInstanceState);
     }
 
     @Override
@@ -57,7 +57,7 @@ public abstract class BaseActivity<UC> extends CoreActivity<UC> {
         return 0;
     }
 
-    private void initialToolbar() {
+    private void initializeToolbar() {
         if (mToolbar != null) {
             mToolbar.setTitle(getTitle());
             setSupportActionBar(mToolbar);
@@ -68,7 +68,7 @@ public abstract class BaseActivity<UC> extends CoreActivity<UC> {
 
     protected void handleIntent(Intent intent, Display display) {}
 
-    protected void initialViews(Bundle savedInstanceState) {}
+    protected void initializeViews(Bundle savedInstanceState) {}
 
     @Override
     public void setTitle(CharSequence title) {

@@ -52,7 +52,7 @@ public class RemarkActivity extends BaseActivity<OrderController.OrderUiCallback
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         if (!TextUtils.isEmpty(mRemark)) {
             mContentEdit.setText(mRemark);
             mContentEdit.setSelection(mRemark.length());

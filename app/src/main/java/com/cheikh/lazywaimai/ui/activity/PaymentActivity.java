@@ -54,7 +54,7 @@ public class PaymentActivity extends BaseActivity<OrderController.OrderUiCallbac
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mAdapter = new PlatformListAdapter();
         mAdapter.setSelectedPosition(0);
         mAdapter.setViewEventListener(new ViewEventListener<PaymentPlatform>() {

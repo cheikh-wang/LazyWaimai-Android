@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity<MainController.MainUiCallbacks>
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         final LayoutInflater inflater = LayoutInflater.from(this);
         final int[] tabIcons = {R.drawable.tab_ic_home, R.drawable.tab_ic_orders, R.drawable.tab_ic_me};
         final int[] tabTitles = {R.string.tab_home, R.string.tab_orders, R.string.tab_me};

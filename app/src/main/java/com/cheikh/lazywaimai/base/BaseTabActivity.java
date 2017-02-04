@@ -32,7 +32,7 @@ public abstract class BaseTabActivity<UC> extends BaseActivity<UC> {
     private int mCurrentItem;
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mAdapter = new TabPagerAdapter(getSupportFragmentManager());
 
         mViewPager.setAdapter(mAdapter);

@@ -92,7 +92,7 @@ public class SettleActivity extends BaseActivity<OrderController.OrderUiCallback
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mSendTimeAdapter = new SendTimeListAdapter();
 
         mOfflineDrawable = getResources().getDrawable(R.drawable.ic_check_off);

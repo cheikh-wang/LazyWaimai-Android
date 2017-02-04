@@ -62,7 +62,7 @@ public class UpdateAddressActivity extends BaseActivity<AddressController.Addres
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         if (mOriginalAddress != null) {
             setTitle(R.string.title_change_address);
             mNameEdit.setText(mOriginalAddress.getName());

@@ -37,7 +37,7 @@ public abstract class BaseListActivity<T, UC> extends BaseActivity<UC>
     protected LoadMoreWrapperAdapter<T> mAdapter;
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mRefreshLayout.setEnabled(getEnableRefresh());
         mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override

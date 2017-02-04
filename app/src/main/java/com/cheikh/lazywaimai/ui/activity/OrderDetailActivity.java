@@ -85,7 +85,7 @@ public class OrderDetailActivity extends BaseActivity<OrderController.OrderUiCal
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh() {

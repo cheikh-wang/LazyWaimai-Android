@@ -45,8 +45,8 @@ public class BusinessActivity extends BaseTabActivity<BusinessController.Busines
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
-        super.initialViews(savedInstanceState);
+    protected void initializeViews(Bundle savedInstanceState) {
+        super.initializeViews(savedInstanceState);
         setTitle(mBusiness.getName());
     }
 

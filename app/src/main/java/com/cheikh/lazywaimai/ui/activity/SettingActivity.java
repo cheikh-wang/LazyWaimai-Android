@@ -45,7 +45,7 @@ public class SettingActivity extends BaseActivity<UserController.UserUiCallbacks
     }
 
     @Override
-    protected void initialViews(Bundle savedInstanceState) {
+    protected void initializeViews(Bundle savedInstanceState) {
         String versionName = SystemUtil.getAppVersionName(this);
         mCheckUpdateBtn.setSubtitle(getString(R.string.label_current_version_name, versionName));
         mLogoutLayout.setVisibility(AppCookie.isLoggin() ? View.VISIBLE : View.GONE);
