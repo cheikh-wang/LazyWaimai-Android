@@ -9,10 +9,34 @@ public abstract class CountDownTimer {
     private static final int MSG = 1;
 
     private long mCountdownInterval;
-    private boolean mIsCountingDown;
-    private long mMillisInFuture;
     private long mStopTimeInFuture;
-    private Handler mHandler = new CountDownHandler();
+
+    private boolean mIsCountingDown;
+
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            synchronized(this) {
+                long millisLeft = mStopTimeInFuture - SystemClock.elapsedRealtime();
+                if (millisLeft <= 0) {
+                    mIsCountingDown = false;
+                    onFinish();
+                } else if (millisLeft < mCountdownInterval) {
+                    onTick(millisLeft);
+                    sendEmptyMessageDelayed(MSG, mCountdownInterval);
+                } else {
+                    long lastTickStart = SystemClock.elapsedRealtime();
+                    // onTick回调可能会有延迟
+                    onTick(millisLeft);
+                    long delay = (mCountdownInterval + lastTickStart) - SystemClock.elapsedRealtime();
+                    while (delay < 0) {
+                        delay += mCountdownInterval;
+                    }
+                    sendEmptyMessageDelayed(MSG, delay);
+                }
+            }
+        }
+    };
 
     protected abstract void onTick(long millisLeft);
 
@@ -41,49 +65,14 @@ public abstract class CountDownTimer {
      * @return
      */
     public final synchronized CountDownTimer start(long millisInFuture, long countDownInterval) {
-        mMillisInFuture = millisInFuture;
         mCountdownInterval = countDownInterval;
         mIsCountingDown = true;
-        if (mMillisInFuture <= 0) {
+        if (millisInFuture <= 0) {
             onFinish();
         } else {
-            mStopTimeInFuture = SystemClock.elapsedRealtime() + mMillisInFuture;
+            mStopTimeInFuture = SystemClock.elapsedRealtime() + millisInFuture;
             mHandler.sendEmptyMessage(MSG);
         }
         return this;
-    }
-
-    public void reset(long millisInFuture) {
-        if (mMillisInFuture <= 0) {
-            cancel();
-            onFinish();
-        }
-        mMillisInFuture = millisInFuture;
-        mStopTimeInFuture = SystemClock.elapsedRealtime() + mMillisInFuture;
-    }
-
-    private class CountDownHandler extends Handler {
-
-        @Override
-        public void handleMessage(Message msg) {
-            synchronized(this) {
-                long millisLeft = mStopTimeInFuture - SystemClock.elapsedRealtime();
-                if (millisLeft <= 0) {
-                    mIsCountingDown = false;
-                    onFinish();
-                } else if (millisLeft < mCountdownInterval) {
-                    onTick(millisLeft);
-                    sendEmptyMessageDelayed(MSG, mCountdownInterval);
-                } else {
-                    long lastTickStart = SystemClock.elapsedRealtime();
-                    onTick(millisLeft);
-                    long delay = (mCountdownInterval + lastTickStart) - SystemClock.elapsedRealtime();
-                    while (delay < 0) {
-                        delay += mCountdownInterval;
-                    }
-                    sendMessageDelayed(obtainMessage(MSG), delay);
-                }
-            }
-        }
     }
 }

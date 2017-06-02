@@ -76,20 +76,22 @@ public class RegisterSecondStepFragment extends BaseFragment<UserController.User
     @Override
     protected void initializeViews(Bundle savedInstanceState) {
         mTitleTxt.setText(getString(R.string.label_send_code_title, mMobile));
-        mSendCodeBtn.setOnCountDownListener(new CountDownTimerView.OnCountDownListener() {
-            @Override
-            public boolean onCountDownFinishState() {
-                return mCodeEdit != null && !TextUtils.isEmpty(mCodeEdit.getText().toString());
-            }
-        });
-        mSendCodeBtn.countDown(30000);
+        // 开始倒计时
+        mSendCodeBtn.startCountDown(30000);
         ToastUtil.showToast(R.string.toast_success_send_sms_code);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // destroy前一定要取消计时，否则会内存泄露
+        mSendCodeBtn.cancelCountDown();
     }
 
     @Override
     public void sendCodeFinish() {
         // 开始倒计时
-        mSendCodeBtn.countDown(30000);
+        mSendCodeBtn.startCountDown(30000);
         cancelLoading();
         ToastUtil.showToast(R.string.toast_success_send_sms_code);
     }
