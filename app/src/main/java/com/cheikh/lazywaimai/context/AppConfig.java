@@ -14,7 +14,9 @@ public class AppConfig {
     /**
      * 服务器地址
      */
-    public static final String SERVER_URL = "http://api.beta.lazywaimai.com/v1/";
+    // 我的域名lazywaimai.com没有备案，最近被封了，只能使用ip地址了，url路径有点长。。。。。
+//    public static final String SERVER_URL = "http://api.beta.lazywaimai.com/v1/";
+    public static final String SERVER_URL = "http://139.199.72.107/LazyWaimai-Api/web/v1/";
 
     /**
      * 连接超时时间
