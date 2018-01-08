@@ -1,10 +1,9 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 apply plugin: 'bugly'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
         applicationId "com.cheikh.lazywaimai"
@@ -69,7 +68,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     // 依赖注入框架
     compile 'com.squareup.dagger:dagger:1.2.2'
-    apt 'com.squareup.dagger:dagger-compiler:1.2.2'
+    annotationProcessor 'com.squareup.dagger:dagger-compiler:1.2.2'
     // 网络通信框架
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
