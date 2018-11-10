@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.model.bean.Business;
@@ -26,37 +26,37 @@ import com.cheikh.lazywaimai.util.StringFetcher;
 
 public class OrderReportView extends FrameLayout {
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView mBusinessNameTxt;
 
-    @Bind(R.id.img_arrow)
+    @BindView(R.id.img_arrow)
     ImageView mArrowImg;
 
-    @Bind(R.id.divider)
+    @BindView(R.id.divider)
     View mShoppingProductDivider;
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView mShoppingProductRecyclerView;
 
-    @Bind(R.id.divider2)
+    @BindView(R.id.divider2)
     View mExtraFeeDivider;
 
-    @Bind(R.id.recycler_view2)
+    @BindView(R.id.recycler_view2)
     RecyclerView mExtraFeeRecyclerView;
 
-    @Bind(R.id.divider3)
+    @BindView(R.id.divider3)
     View mDiscountListDivider;
 
-    @Bind(R.id.recycler_view3)
+    @BindView(R.id.recycler_view3)
     RecyclerView mDiscountInfoRecyclerView;
 
-    @Bind(R.id.txt_origin_price)
+    @BindView(R.id.txt_origin_price)
     TextView mOriginPriceTxt;
 
-    @Bind(R.id.txt_discount_price)
+    @BindView(R.id.txt_discount_price)
     TextView mDiscountPriceTxt;
 
-    @Bind(R.id.txt_total_price)
+    @BindView(R.id.txt_total_price)
     TextView mTotalPriceTxt;
 
     private ShoppingProductListAdapter mShoppingProductAdapter;

@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseViewHolder;
 import com.cheikh.lazywaimai.model.bean.CartInfo;
@@ -17,13 +17,13 @@ import com.cheikh.lazywaimai.util.StringFetcher;
 
 public class ExtraFeeItemViewHolder extends BaseViewHolder<CartInfo.ExtraFee> {
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView nameTxt;
 
-    @Bind(R.id.txt_price)
+    @BindView(R.id.txt_price)
     TextView priceTxt;
 
-    @Bind(R.id.txt_desc)
+    @BindView(R.id.txt_desc)
     TextView descTxt;
 
     public ExtraFeeItemViewHolder(View itemView) {

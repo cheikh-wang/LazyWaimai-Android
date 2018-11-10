@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.flipboard.bottomsheet.BottomSheetLayout;
 import java.util.List;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseController;
@@ -36,31 +36,31 @@ import za.co.immedia.pinnedheaderlistview.PinnedHeaderListView;
 public class ProductFragment extends BaseFragment<BusinessController.BusinessUiCallbacks>
         implements BusinessController.ProductListUi, BaseController.SubUi {
 
-    @Bind(R.id.multi_state_view)
+    @BindView(R.id.multi_state_view)
     MultiStateView mMultiStateView;
 
-    @Bind(R.id.bottom_sheet_layout)
+    @BindView(R.id.bottom_sheet_layout)
     BottomSheetLayout mBottomSheetLayout;
 
-    @Bind(R.id.lv_product_category)
+    @BindView(R.id.lv_product_category)
     ListView mCategoryListView;
 
-    @Bind(R.id.lv_product_list)
+    @BindView(R.id.lv_product_list)
     PinnedHeaderListView mProductListView;
 
-    @Bind(R.id.layout_shopping_info)
+    @BindView(R.id.layout_shopping_info)
     LinearLayout mShoppingInfoLayout;
 
-    @Bind(R.id.img_cart_logo)
+    @BindView(R.id.img_cart_logo)
     ImageView mCartLogoImg;
 
-    @Bind(R.id.txt_selected_count)
+    @BindView(R.id.txt_selected_count)
     TextView mSelectedCountTxt;
 
-    @Bind(R.id.txt_total_price)
+    @BindView(R.id.txt_total_price)
     TextView mTotalPriceTxt;
 
-    @Bind(R.id.btn_settle)
+    @BindView(R.id.btn_settle)
     Button mSettleBtn;
 
     private ProductCategoryListAdapter mCategoryItemAdapter;

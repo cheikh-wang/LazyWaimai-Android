@@ -3,7 +3,7 @@ package com.cheikh.lazywaimai.ui.adapter.holder;
 import android.view.View;
 import android.widget.TextView;
 import java.util.Date;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseViewHolder;
@@ -26,34 +26,34 @@ import static com.cheikh.lazywaimai.util.Constants.ClickType.CLICK_TYPE_EVALUATE
  */
 public class OrderItemViewHolder extends BaseViewHolder<Order> {
 
-    @Bind(R.id.view_content)
+    @BindView(R.id.view_content)
     View mContentView;
 
-    @Bind(R.id.img_business_photo)
+    @BindView(R.id.img_business_photo)
     PicassoImageView businessPhotoImg;
 
-    @Bind(R.id.txt_business_name)
+    @BindView(R.id.txt_business_name)
     TextView businessNameTxt;
 
-    @Bind(R.id.txt_total_price)
+    @BindView(R.id.txt_total_price)
     TextView totalPriceTxt;
 
-    @Bind(R.id.txt_created_at)
+    @BindView(R.id.txt_created_at)
     TextView createAtTxt;
 
-    @Bind(R.id.txt_order_status)
+    @BindView(R.id.txt_order_status)
     TextView orderStatusTxt;
 
-    @Bind(R.id.btn_evaluate)
+    @BindView(R.id.btn_evaluate)
     TextView evaluateTxt;
 
-    @Bind(R.id.btn_confirm_received)
+    @BindView(R.id.btn_confirm_received)
     TextView confirmReceivedTxt;
 
-    @Bind(R.id.btn_payment)
+    @BindView(R.id.btn_payment)
     TextView paymentTxt;
 
-    @Bind(R.id.btn_order_again)
+    @BindView(R.id.btn_order_again)
     TextView orderAgainTxt;
 
     public OrderItemViewHolder(View itemView) {

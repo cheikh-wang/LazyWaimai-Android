@@ -3,7 +3,7 @@ package com.cheikh.lazywaimai.ui.adapter.holder;
 import android.view.View;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseViewHolder;
 import com.cheikh.lazywaimai.model.ShoppingCart;
@@ -19,13 +19,13 @@ import com.cheikh.lazywaimai.widget.ShoppingCountView;
 
 public class ShoppingCartItemViewHolder extends BaseViewHolder<ShoppingEntity> {
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView mNameTxt;
 
-    @Bind(R.id.txt_price)
+    @BindView(R.id.txt_price)
     TextView mPriceTxt;
 
-    @Bind(R.id.shopping_count_view)
+    @BindView(R.id.shopping_count_view)
     ShoppingCountView mShoppingCountView;
 
     public ShoppingCartItemViewHolder(View itemView) {

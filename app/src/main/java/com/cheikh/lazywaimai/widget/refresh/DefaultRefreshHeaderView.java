@@ -9,7 +9,7 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.cheikh.lazywaimai.R;
 
@@ -18,22 +18,22 @@ import com.cheikh.lazywaimai.R;
  */
 public class DefaultRefreshHeaderView extends BaseRefreshHeaderView {
 
-    @Bind(R.id.pull_sun)
+    @BindView(R.id.pull_sun)
     ImageView sunImg;
 
-    @Bind(R.id.pull_rider)
+    @BindView(R.id.pull_rider)
     ImageView riderImg;
 
-    @Bind(R.id.pull_wheel_left)
+    @BindView(R.id.pull_wheel_left)
     ImageView leftWheelImg;
 
-    @Bind(R.id.pull_wheel_right)
+    @BindView(R.id.pull_wheel_right)
     ImageView rightWheelImg;
 
-    @Bind(R.id.pull_backImg_left)
+    @BindView(R.id.pull_backImg_left)
     ImageView leftBackImg;
 
-    @Bind(R.id.pull_backImg_right)
+    @BindView(R.id.pull_backImg_right)
     ImageView rightBackImg;
 
     private Animation sunRotation;
@@ -92,12 +92,6 @@ public class DefaultRefreshHeaderView extends BaseRefreshHeaderView {
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         ButterKnife.bind(this);
-    }
-
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        ButterKnife.unbind(this);
     }
 
     @Override

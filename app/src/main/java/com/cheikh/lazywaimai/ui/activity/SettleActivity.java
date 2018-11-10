@@ -9,7 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseActivity;
@@ -40,34 +40,34 @@ public class SettleActivity extends BaseActivity<OrderController.OrderUiCallback
 
     public static final int REQUEST_CODE_REMARK = 1000;
 
-    @Bind(R.id.multi_state_view)
+    @BindView(R.id.multi_state_view)
     MultiStateView mMultiStateView;
 
-    @Bind(R.id.view_address_info)
+    @BindView(R.id.view_address_info)
     AddressView mAddressInfoView;
 
-    @Bind(R.id.txt_online_payment)
+    @BindView(R.id.txt_online_payment)
     TextView mOnlinePaymentTxt;
 
-    @Bind(R.id.txt_offline_payment)
+    @BindView(R.id.txt_offline_payment)
     TextView mOfflinePaymentTxt;
 
-    @Bind(R.id.layout_send_time)
+    @BindView(R.id.layout_send_time)
     View mSendTimeLayout;
 
-    @Bind(R.id.txt_booked_time)
+    @BindView(R.id.txt_booked_time)
     TextView mBookedTimeTxt;
 
-    @Bind(R.id.orderReportView)
+    @BindView(R.id.orderReportView)
     OrderReportView mOrderReportView;
 
-    @Bind(R.id.btn_submit_order)
+    @BindView(R.id.btn_submit_order)
     Button mSubmitOrderBtn;
 
-    @Bind(R.id.layout_remark)
+    @BindView(R.id.layout_remark)
     View mRemarkLayout;
 
-    @Bind(R.id.txt_remark)
+    @BindView(R.id.txt_remark)
     TextView mRemarkTxt;
 
     private SendTimeListAdapter mSendTimeAdapter;

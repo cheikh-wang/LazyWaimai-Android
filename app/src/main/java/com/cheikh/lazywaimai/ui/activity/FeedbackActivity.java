@@ -16,7 +16,7 @@ import com.cheikh.lazywaimai.ui.Display;
 import com.cheikh.lazywaimai.util.ContentView;
 import com.cheikh.lazywaimai.util.SystemUtil;
 import com.cheikh.lazywaimai.util.ToastUtil;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnTextChanged;
 
 /**
@@ -27,13 +27,13 @@ import butterknife.OnTextChanged;
 public class FeedbackActivity extends BaseActivity<MainController.MainUiCallbacks>
         implements MainController.MainFeedbackUi {
 
-    @Bind(R.id.edit_content)
+    @BindView(R.id.edit_content)
     EditText mContentEdit;
 
-    @Bind(R.id.txt_count)
+    @BindView(R.id.txt_count)
     TextView mContentCountTxt;
 
-    @Bind(R.id.edit_contact_way)
+    @BindView(R.id.edit_contact_way)
     EditText mContactWayEdit;
 
     private MenuItem mSubmitMenuItem;

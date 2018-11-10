@@ -3,7 +3,7 @@ package com.cheikh.lazywaimai.ui.adapter.holder;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseViewHolder;
 import com.cheikh.lazywaimai.model.bean.Address;
@@ -17,22 +17,22 @@ import static com.cheikh.lazywaimai.util.Constants.ClickType.CLICK_TYPE_EDIT_BTN
  */
 public class AddressItemViewHolder extends BaseViewHolder<Address> {
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView mNameTxt;
 
-    @Bind(R.id.txt_gender)
+    @BindView(R.id.txt_gender)
     TextView mGenderTxt;
 
-    @Bind(R.id.txt_mobile)
+    @BindView(R.id.txt_mobile)
     TextView mMobileTxt;
 
-    @Bind(R.id.txt_address)
+    @BindView(R.id.txt_address)
     TextView mAddressTxt;
 
-    @Bind(R.id.btn_delete)
+    @BindView(R.id.btn_delete)
     ImageButton mDeleteBtn;
 
-    @Bind(R.id.btn_edit)
+    @BindView(R.id.btn_edit)
     ImageButton mEditBtn;
 
     public AddressItemViewHolder(View itemView) {

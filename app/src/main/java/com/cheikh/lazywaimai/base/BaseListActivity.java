@@ -15,7 +15,7 @@ import com.cheikh.lazywaimai.widget.MultiStateView;
 import com.cheikh.lazywaimai.widget.refresh.OnRefreshListener;
 import com.cheikh.lazywaimai.widget.refresh.RefreshLayout;
 import java.util.List;
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author: cheikh.wang on 17/1/11
@@ -25,13 +25,13 @@ import butterknife.Bind;
 public abstract class BaseListActivity<T, UC> extends BaseActivity<UC>
         implements BaseController.ListUi<T, UC> {
 
-    @Bind(R.id.multi_state_view)
+    @BindView(R.id.multi_state_view)
     MultiStateView mMultiStateView;
 
-    @Bind(R.id.refresh_layout)
+    @BindView(R.id.refresh_layout)
     RefreshLayout mRefreshLayout;
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
     protected LoadMoreWrapperAdapter<T> mAdapter;

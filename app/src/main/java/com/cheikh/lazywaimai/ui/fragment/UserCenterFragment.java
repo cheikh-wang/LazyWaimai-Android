@@ -6,7 +6,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseController;
@@ -24,28 +24,28 @@ import com.cheikh.lazywaimai.widget.section.SectionTextItemView;
 public class UserCenterFragment extends BaseFragment<UserController.UserUiCallbacks>
         implements UserController.UserCenterUi {
 
-    @Bind(R.id.layout_login_before)
+    @BindView(R.id.layout_login_before)
     View mLoginBeforeLayout;
 
-    @Bind(R.id.layout_login_after)
+    @BindView(R.id.layout_login_after)
     View mLoginAfterLayout;
 
-    @Bind(R.id.img_avatar)
+    @BindView(R.id.img_avatar)
     PicassoImageView mAvatarImg;
 
-    @Bind(R.id.txt_nickname)
+    @BindView(R.id.txt_nickname)
     TextView mNicknameTxt;
 
-    @Bind(R.id.txt_user_phone)
+    @BindView(R.id.txt_user_phone)
     TextView mUserPhoneTxt;
 
-    @Bind(R.id.btn_my_address)
+    @BindView(R.id.btn_my_address)
     SectionTextItemView mManageAddressBtn;
 
-    @Bind(R.id.btn_my_favorites)
+    @BindView(R.id.btn_my_favorites)
     SectionTextItemView mManageFavoriteBtn;
 
-    @Bind(R.id.btn_my_evaluates)
+    @BindView(R.id.btn_my_evaluates)
     SectionTextItemView mManageEvaluate;
 
     @Override

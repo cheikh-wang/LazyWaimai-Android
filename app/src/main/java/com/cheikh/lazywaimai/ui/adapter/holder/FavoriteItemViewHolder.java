@@ -8,7 +8,7 @@ import com.cheikh.lazywaimai.model.bean.Business;
 import com.cheikh.lazywaimai.model.bean.Favorite;
 import com.cheikh.lazywaimai.util.StringFetcher;
 import com.cheikh.lazywaimai.widget.PicassoImageView;
-import butterknife.Bind;
+import butterknife.BindView;
 import static com.cheikh.lazywaimai.util.Constants.ClickType.CLICK_TYPE_BUSINESS_CLICKED;
 
 /**
@@ -17,16 +17,16 @@ import static com.cheikh.lazywaimai.util.Constants.ClickType.CLICK_TYPE_BUSINESS
  */
 public class FavoriteItemViewHolder extends BaseViewHolder<Favorite> {
 
-    @Bind(R.id.img_photo)
+    @BindView(R.id.img_photo)
     PicassoImageView mPhotoImg;
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView mNameTxt;
 
-    @Bind(R.id.txt_month_sales)
+    @BindView(R.id.txt_month_sales)
     TextView mMonthSalesTxt;
 
-    @Bind(R.id.txt_content)
+    @BindView(R.id.txt_content)
     TextView mMultiContentTxt;
 
     public FavoriteItemViewHolder(View itemView) {

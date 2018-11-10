@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import java.util.List;
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.model.bean.ResponseError;
 import com.cheikh.lazywaimai.util.ContentView;
@@ -21,13 +21,13 @@ import com.cheikh.lazywaimai.widget.refresh.RefreshLayout;
 public abstract class BaseListFragment<T, UC> extends BaseFragment<UC>
         implements BaseController.ListUi<T, UC> {
 
-    @Bind(R.id.multi_state_view)
+    @BindView(R.id.multi_state_view)
     MultiStateView mMultiStateView;
 
-    @Bind(R.id.refresh_layout)
+    @BindView(R.id.refresh_layout)
     RefreshLayout mRefreshLayout;
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
     protected LoadMoreWrapperAdapter<T> mAdapter;

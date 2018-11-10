@@ -17,7 +17,7 @@ import com.cheikh.lazywaimai.ui.Display;
 import com.cheikh.lazywaimai.util.ContentView;
 import com.cheikh.lazywaimai.widget.FixWrapLayout;
 import java.util.List;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnTextChanged;
 
 /**
@@ -28,13 +28,13 @@ import butterknife.OnTextChanged;
 public class RemarkActivity extends BaseActivity<OrderController.OrderUiCallbacks>
         implements OrderController.OrderRemarkUi, View.OnClickListener {
 
-    @Bind(R.id.edit_content)
+    @BindView(R.id.edit_content)
     EditText mContentEdit;
 
-    @Bind(R.id.txt_count)
+    @BindView(R.id.txt_count)
     TextView mContentCountTxt;
 
-    @Bind(R.id.layout_common_remarks)
+    @BindView(R.id.layout_common_remarks)
     FixWrapLayout mCommonRemarksLayout;
 
     private MenuItem mFinishMenuItem;

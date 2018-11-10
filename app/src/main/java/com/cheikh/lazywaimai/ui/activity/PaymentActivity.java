@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseActivity;
@@ -33,10 +33,10 @@ import java.util.List;
 public class PaymentActivity extends BaseActivity<OrderController.OrderUiCallbacks>
         implements OrderController.OrderPaymentUi {
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
-    @Bind(R.id.btn_payment)
+    @BindView(R.id.btn_payment)
     Button mBtnPayment;
 
     private PlatformListAdapter mAdapter;

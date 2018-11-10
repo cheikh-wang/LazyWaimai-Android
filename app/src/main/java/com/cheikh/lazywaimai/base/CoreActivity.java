@@ -53,7 +53,6 @@ public abstract class CoreActivity<UC> extends AppCompatActivity
         super.onDestroy();
         getController().detachUi(this);
         ActivityStack.create().remove(this);
-        AppContext.getContext().getRefWatcher().watch(this);
     }
 
     protected abstract int getLayoutId();

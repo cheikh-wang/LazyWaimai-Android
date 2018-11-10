@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 import com.cheikh.lazywaimai.R;
@@ -30,19 +30,19 @@ import com.cheikh.lazywaimai.util.ToastUtil;
 public class RegisterThirdStepFragment extends BaseFragment<UserController.UserUiCallbacks>
         implements UserController.RegisterThirdStepUi {
 
-    @Bind(R.id.edit_password)
+    @BindView(R.id.edit_password)
     EditText mPasswordEdit;
 
-    @Bind(R.id.btn_clear_password)
+    @BindView(R.id.btn_clear_password)
     ImageView mClearPasswordBtn;
 
-    @Bind(R.id.edit_password_again)
+    @BindView(R.id.edit_password_again)
     EditText mPasswordAgainEdit;
 
-    @Bind(R.id.btn_clear_password_again)
+    @BindView(R.id.btn_clear_password_again)
     ImageView mClearPasswordAgainBtn;
 
-    @Bind(R.id.btn_register)
+    @BindView(R.id.btn_register)
     Button mRegisterBtn;
 
     private String mMobile;

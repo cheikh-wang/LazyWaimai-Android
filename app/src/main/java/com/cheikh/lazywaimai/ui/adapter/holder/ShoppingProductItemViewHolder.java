@@ -2,7 +2,7 @@ package com.cheikh.lazywaimai.ui.adapter.holder;
 
 import android.view.View;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseViewHolder;
 import com.cheikh.lazywaimai.model.bean.ShoppingEntity;
@@ -14,13 +14,13 @@ import com.cheikh.lazywaimai.util.StringFetcher;
  */
 public class ShoppingProductItemViewHolder extends BaseViewHolder<ShoppingEntity> {
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView nameTxt;
 
-    @Bind(R.id.txt_quantity)
+    @BindView(R.id.txt_quantity)
     TextView quantityTxt;
 
-    @Bind(R.id.txt_price)
+    @BindView(R.id.txt_price)
     TextView priceTxt;
 
     public ShoppingProductItemViewHolder(View itemView) {

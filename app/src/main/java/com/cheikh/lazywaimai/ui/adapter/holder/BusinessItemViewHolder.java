@@ -2,7 +2,7 @@ package com.cheikh.lazywaimai.ui.adapter.holder;
 
 import android.view.View;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import cn.bingoogolapple.badgeview.BGABadgeFrameLayout;
 import com.cheikh.lazywaimai.R;
@@ -19,22 +19,22 @@ import static com.cheikh.lazywaimai.util.Constants.ClickType.CLICK_TYPE_BUSINESS
  */
 public class BusinessItemViewHolder extends BaseViewHolder<Business> {
 
-    @Bind(R.id.list_item)
+    @BindView(R.id.list_item)
     View mListItem;
 
-    @Bind(R.id.badge_view)
+    @BindView(R.id.badge_view)
     BGABadgeFrameLayout mBadgeView;
 
-    @Bind(R.id.img_photo)
+    @BindView(R.id.img_photo)
     PicassoImageView mPhotoImg;
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView mNameTxt;
 
-    @Bind(R.id.txt_month_sales)
+    @BindView(R.id.txt_month_sales)
     TextView mMonthSalesTxt;
 
-    @Bind(R.id.txt_content)
+    @BindView(R.id.txt_content)
     TextView mMultiContentTxt;
 
     public BusinessItemViewHolder(View itemView) {

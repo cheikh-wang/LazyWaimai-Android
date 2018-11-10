@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 import com.cheikh.lazywaimai.R;
@@ -30,13 +30,13 @@ import com.cheikh.lazywaimai.util.ToastUtil;
 public class RegisterFirstStepFragment extends BaseFragment<UserController.UserUiCallbacks>
         implements UserController.RegisterFirstStepUi {
 
-    @Bind(R.id.edit_mobile)
+    @BindView(R.id.edit_mobile)
     EditText mMobileEdit;
 
-    @Bind(R.id.btn_clear_mobile)
+    @BindView(R.id.btn_clear_mobile)
     ImageView mClearMobileBtn;
 
-    @Bind(R.id.btn_send_code)
+    @BindView(R.id.btn_send_code)
     Button mSendCodeBtn;
 
     @Override
