@@ -31,7 +31,6 @@ public abstract class CoreFragment<UC> extends Fragment implements BaseControlle
     public void onDestroy() {
         super.onDestroy();
         getController().detachUi(this);
-        AppContext.getContext().getRefWatcher().watch(this);
     }
 
     @Override

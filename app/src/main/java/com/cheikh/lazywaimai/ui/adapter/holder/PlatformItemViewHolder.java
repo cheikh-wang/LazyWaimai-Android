@@ -7,7 +7,7 @@ import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseViewHolder;
 import com.cheikh.lazywaimai.model.bean.PaymentPlatform;
 import com.cheikh.lazywaimai.widget.PicassoImageView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import static com.cheikh.lazywaimai.util.Constants.ClickType.CLICK_TYPE_PAYMENT_PLATFORM_CLICKED;
 
@@ -17,19 +17,19 @@ import static com.cheikh.lazywaimai.util.Constants.ClickType.CLICK_TYPE_PAYMENT_
  */
 public class PlatformItemViewHolder extends BaseViewHolder<PaymentPlatform> {
 
-    @Bind(R.id.list_item)
+    @BindView(R.id.list_item)
     View listItem;
 
-    @Bind(R.id.img_icon)
+    @BindView(R.id.img_icon)
     PicassoImageView platformIcon;
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView platformName;
 
-    @Bind(R.id.radio)
+    @BindView(R.id.radio)
     RadioButton radioBtn;
 
-    @Bind(R.id.divider)
+    @BindView(R.id.divider)
     View divider;
 
     public PlatformItemViewHolder(View view) {

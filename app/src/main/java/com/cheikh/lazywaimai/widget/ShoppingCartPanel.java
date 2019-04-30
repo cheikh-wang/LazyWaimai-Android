@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.cheikh.lazywaimai.R;
@@ -26,10 +26,10 @@ import com.cheikh.lazywaimai.ui.adapter.ShoppingCartListAdapter;
  */
 public class ShoppingCartPanel extends FrameLayout {
 
-    @Bind(R.id.txt_clear)
+    @BindView(R.id.txt_clear)
     TextView mClearTxt;
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
     private ShoppingCartListAdapter mAdapter;

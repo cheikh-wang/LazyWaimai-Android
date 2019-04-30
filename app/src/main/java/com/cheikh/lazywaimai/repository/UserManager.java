@@ -1,9 +1,7 @@
 package com.cheikh.lazywaimai.repository;
 
-import com.cheikh.lazywaimai.context.AppConfig;
 import com.cheikh.lazywaimai.model.bean.User;
 import com.cheikh.lazywaimai.util.PreferenceUtil;
-import com.tencent.bugly.crashreport.CrashReport;
 
 public class UserManager {
 
@@ -17,13 +15,6 @@ public class UserManager {
         }
         this.user = user;
         PreferenceUtil.set(CLAZZ.getName(), this.user);
-        if (!AppConfig.DEBUG) {
-            try {
-                CrashReport.setUserId(user.getId());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     public User getUser() {

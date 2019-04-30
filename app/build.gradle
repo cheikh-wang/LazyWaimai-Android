@@ -1,22 +1,16 @@
 apply plugin: 'com.android.application'
-apply plugin: 'bugly'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.cheikh.lazywaimai"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
     }
 
     lintOptions {
@@ -46,64 +40,66 @@ android {
     }
 }
 
-bugly {
-    appId = '1a859a4b54'
-    appKey = '5bc501a6-8da3-4de0-971a-18367d47ec62'
+configurations.all {
+    // 如下依赖冲突时强制使用制定版本
+    resolutionStrategy {
+        force "com.android.support:appcompat-v7:$supportVersion"
+        force "com.android.support:design:$supportVersion"
+        force "com.android.support:support-annotation:$supportVersion"
+        force "com.android.support:support-v4:$supportVersion"
+        force "com.android.support:support-v7:$supportVersion"
+    }
 }
 
-def SUPPORT_VERSION = "24.2.1"
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:' + SUPPORT_VERSION
-    compile 'com.android.support:recyclerview-v7:' + SUPPORT_VERSION
-    compile 'com.android.support:design:' + SUPPORT_VERSION
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:' + supportVersion
+    implementation 'com.android.support:design:' + supportVersion
     // google工具库
-    compile 'com.google.guava:guava:18.0'
-    compile 'com.google.code.gson:gson:2.6.1'
+    implementation 'com.google.guava:guava:18.0'
+    implementation 'com.google.code.gson:gson:2.6.1'
     // View注入框架
-    compile 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
     // 依赖注入框架
-    compile 'com.squareup.dagger:dagger:1.2.2'
+    implementation 'com.squareup.dagger:dagger:1.2.2'
     annotationProcessor 'com.squareup.dagger:dagger-compiler:1.2.2'
     // 网络通信框架
-    compile 'com.squareup.retrofit2:retrofit:2.0.2'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
     // OKHttp的日志打印拦截器
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     // 事件总线框架
-    compile 'com.squareup:otto:1.3.8'
+    implementation 'com.squareup:otto:1.3.8'
     // 图片加载框架
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     // 漂亮的日志打印工具
-    compile 'com.orhanobut:logger:1.9'
+    implementation 'com.orhanobut:logger:2.2.0'
     // View注入框架
-    compile 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
     // 动画库
-    compile 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
     // 底部Tab组件
-    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
-    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
     // 函数式编程框架
-    compile 'io.reactivex:rxjava:1.2.4'
-    compile 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.2.4'
+    implementation 'io.reactivex:rxandroid:1.2.1'
     // 进度条
-    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
+    implementation 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
     // 数字提醒
-    compile 'cn.bingoogolapple:bga-badgeview:1.0.2@aar'
+    implementation 'cn.bingoogolapple:bga-badgeview:1.0.2@aar'
     // 底部弹出视图
-    compile 'com.flipboard:bottomsheet-core:1.5.0'
+    implementation 'com.flipboard:bottomsheet-core:1.5.0'
     // 拍照或者从相册中选择图片进行裁剪
-    compile 'com.jph.takephoto:takephoto_library:2.0.4'
-    // bugly
-    compile 'com.tencent.bugly:crashreport:latest.release'
-    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    implementation 'com.jph.takephoto:takephoto_library:2.0.4'
     // 检查内存泄露的工具
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.2'
 }

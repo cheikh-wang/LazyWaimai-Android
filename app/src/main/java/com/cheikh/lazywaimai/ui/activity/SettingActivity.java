@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseActivity;
@@ -27,16 +27,16 @@ import com.cheikh.lazywaimai.widget.section.SectionTextItemView;
 public class SettingActivity extends BaseActivity<UserController.UserUiCallbacks>
     implements UserController.SettingUi {
 
-        @Bind(R.id.btn_check_update)
+        @BindView(R.id.btn_check_update)
         SectionTextItemView mCheckUpdateBtn;
 
-        @Bind(R.id.btn_feedback)
+        @BindView(R.id.btn_feedback)
         SectionTextItemView mFeedbackBtn;
 
-        @Bind(R.id.layout_logout)
+        @BindView(R.id.layout_logout)
         View mLogoutLayout;
 
-        @Bind(R.id.btn_logout)
+        @BindView(R.id.btn_logout)
         TextView mLogoutBtn;
 
     @Override

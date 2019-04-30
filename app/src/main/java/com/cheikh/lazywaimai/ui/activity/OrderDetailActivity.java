@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import java.util.Date;
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseActivity;
 import com.cheikh.lazywaimai.base.BaseController;
@@ -34,37 +34,37 @@ import com.cheikh.lazywaimai.widget.refresh.RefreshLayout;
 public class OrderDetailActivity extends BaseActivity<OrderController.OrderUiCallbacks>
         implements OrderController.OrderDetailUi, BusinessNameClickHandle {
 
-    @Bind(R.id.multi_state_view)
+    @BindView(R.id.multi_state_view)
     MultiStateView mMultiStateView;
 
-    @Bind(R.id.refresh_layout)
+    @BindView(R.id.refresh_layout)
     RefreshLayout mRefreshLayout;
 
-    @Bind(R.id.orderReportView)
+    @BindView(R.id.orderReportView)
     OrderReportView mOrderReportView;
 
-    @Bind(R.id.txt_deliver_time)
+    @BindView(R.id.txt_deliver_time)
     TextView mDeliverTimeTxt;
 
-    @Bind(R.id.txt_deliver_name)
+    @BindView(R.id.txt_deliver_name)
     TextView mDeliverNameTxt;
 
-    @Bind(R.id.txt_deliver_phone)
+    @BindView(R.id.txt_deliver_phone)
     TextView mDeliverPhoneTxt;
 
-    @Bind(R.id.txt_deliver_address)
+    @BindView(R.id.txt_deliver_address)
     TextView mDeliverAddressTxt;
 
-    @Bind(R.id.txt_order_num)
+    @BindView(R.id.txt_order_num)
     TextView mOrderNumTxt;
 
-    @Bind(R.id.txt_remark)
+    @BindView(R.id.txt_remark)
     TextView mOrderRemarkTxt;
 
-    @Bind(R.id.txt_created_at)
+    @BindView(R.id.txt_created_at)
     TextView mCreateAtTxt;
 
-    @Bind(R.id.txt_pay_method)
+    @BindView(R.id.txt_pay_method)
     TextView mPayMethodTxt;
 
     private String mOrderId;

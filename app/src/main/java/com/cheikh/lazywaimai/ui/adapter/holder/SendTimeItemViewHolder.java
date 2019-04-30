@@ -3,7 +3,7 @@ package com.cheikh.lazywaimai.ui.adapter.holder;
 import android.view.View;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.base.BaseViewHolder;
 import com.cheikh.lazywaimai.model.bean.SettleResult;
 
@@ -13,7 +13,7 @@ import com.cheikh.lazywaimai.model.bean.SettleResult;
  */
 public class SendTimeItemViewHolder extends BaseViewHolder<SettleResult.BookingTime> {
 
-    @Bind(android.R.id.text1)
+    @BindView(android.R.id.text1)
     TextView mTitleTxt;
 
     public SendTimeItemViewHolder(View itemView) {

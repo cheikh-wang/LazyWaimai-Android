@@ -16,7 +16,7 @@ import com.cheikh.lazywaimai.util.ContentView;
 import com.cheikh.lazywaimai.util.StringUtil;
 import com.cheikh.lazywaimai.util.SystemUtil;
 import com.cheikh.lazywaimai.util.ToastUtil;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 
@@ -28,13 +28,13 @@ import butterknife.OnTextChanged;
 public class SetNicknameFragment extends BaseFragment<UserController.UserUiCallbacks>
         implements UserController.UserNicknameUi {
 
-    @Bind(R.id.edit_content)
+    @BindView(R.id.edit_content)
     EditText mContentEdit;
 
-    @Bind(R.id.btn_clear)
+    @BindView(R.id.btn_clear)
     ImageView mClearBtn;
 
-    @Bind(R.id.btn_save)
+    @BindView(R.id.btn_save)
     TextView mSaveBtn;
 
     @Override

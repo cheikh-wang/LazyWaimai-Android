@@ -30,7 +30,7 @@ import com.jph.takephoto.model.CropOptions;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -41,25 +41,25 @@ import butterknife.OnClick;
 public class UserProfileFragment extends BaseFragment<UserController.UserUiCallbacks>
         implements UserController.UserProfileUi {
 
-    @Bind(R.id.item_avatar)
+    @BindView(R.id.item_avatar)
     SectionExtensionItemView mAvatarItem;
 
-    @Bind(R.id.img_avatar)
+    @BindView(R.id.img_avatar)
     PicassoImageView mAvatarImg;
 
-    @Bind(R.id.item_nickname)
+    @BindView(R.id.item_nickname)
     SectionTextItemView mNicknameItem;
 
-    @Bind(R.id.item_username)
+    @BindView(R.id.item_username)
     SectionTextItemView mUsernameItem;
 
-    @Bind(R.id.item_mobile)
+    @BindView(R.id.item_mobile)
     SectionTextItemView mMobileItem;
 
-    @Bind(R.id.item_email)
+    @BindView(R.id.item_email)
     SectionTextItemView mEmailItem;
 
-    @Bind(R.id.item_password)
+    @BindView(R.id.item_password)
     SectionTextItemView mPasswordItem;
 
     private TakePhoto mTakePhoto;

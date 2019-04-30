@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.model.bean.Address;
@@ -18,16 +18,16 @@ import com.cheikh.lazywaimai.model.bean.Address;
  */
 public class AddressView extends FrameLayout {
 
-    @Bind(R.id.txt_name)
+    @BindView(R.id.txt_name)
     TextView nameTxt;
 
-    @Bind(R.id.txt_phone)
+    @BindView(R.id.txt_phone)
     TextView mobileTxt;
 
-    @Bind(R.id.txt_address)
+    @BindView(R.id.txt_address)
     TextView addressTxt;
 
-    @Bind(R.id.layout_address_info)
+    @BindView(R.id.layout_address_info)
     View addressInfoLayout;
 
     public AddressView(Context context) {

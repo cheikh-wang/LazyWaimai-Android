@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 import com.cheikh.lazywaimai.R;
@@ -29,25 +29,25 @@ import com.cheikh.lazywaimai.util.ToastUtil;
 public class LoginActivity extends BaseActivity<UserController.UserUiCallbacks>
         implements UserController.UserLoginUi {
 
-    @Bind(R.id.et_user_account)
+    @BindView(R.id.et_user_account)
     EditText mEtAccount;
 
-    @Bind(R.id.et_user_password)
+    @BindView(R.id.et_user_password)
     EditText mEtPassword;
 
-    @Bind(R.id.iv_delete_account)
+    @BindView(R.id.iv_delete_account)
     ImageView mIvDeleteAccount;
 
-    @Bind(R.id.iv_delete_password)
+    @BindView(R.id.iv_delete_password)
     ImageView mIvDeletePassword;
 
-    @Bind(R.id.btn_login)
+    @BindView(R.id.btn_login)
     Button mBtnLogin;
 
-    @Bind(R.id.tv_forget_password)
+    @BindView(R.id.tv_forget_password)
     TextView mTvForgetPassword;
 
-    @Bind(R.id.tv_go_to_register)
+    @BindView(R.id.tv_go_to_register)
     TextView mTvGoToRegister;
 
     @Override

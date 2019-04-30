@@ -62,6 +62,10 @@ public class ResponseErrorProxy implements InvocationHandler {
                         return observable.flatMap(new Func1<Throwable, Observable<?>>() {
                             @Override
                             public Observable<?> call(Throwable throwable) {
+                                if (BuildConfig.DEBUG) {
+                                    Logger.e("网络请求出现错误: " + throwable.toString());
+                                }
+
                                 ResponseError error = null;
                                 if (throwable instanceof ConnectTimeoutException
                                         || throwable instanceof SocketTimeoutException
@@ -89,10 +93,6 @@ public class ResponseErrorProxy implements InvocationHandler {
                                 } else {
                                     error = new ResponseError(HTTP_UNKNOWN_ERROR,
                                             StringFetcher.getString(R.string.toast_error_unknown));
-                                }
-
-                                if (BuildConfig.DEBUG) {
-                                    Logger.e("网络请求出现错误: " + error.toString());
                                 }
 
                                 if (error.getStatus() == HTTP_UNAUTHORIZED) {

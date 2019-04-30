@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 import com.cheikh.lazywaimai.R;
@@ -32,19 +32,19 @@ import com.cheikh.lazywaimai.widget.CountDownTimerView;
 public class RegisterSecondStepFragment extends BaseFragment<UserController.UserUiCallbacks>
         implements UserController.RegisterSecondStepUi {
 
-    @Bind(R.id.txt_title)
+    @BindView(R.id.txt_title)
     TextView mTitleTxt;
 
-    @Bind(R.id.edit_code)
+    @BindView(R.id.edit_code)
     EditText mCodeEdit;
 
-    @Bind(R.id.btn_clear_code)
+    @BindView(R.id.btn_clear_code)
     ImageView mClearCodeBtn;
 
-    @Bind(R.id.btn_send_code)
+    @BindView(R.id.btn_send_code)
     CountDownTimerView mSendCodeBtn;
 
-    @Bind(R.id.btn_submit)
+    @BindView(R.id.btn_submit)
     Button mSubmitCodeBtn;
 
     private String mMobile;
@@ -85,7 +85,9 @@ public class RegisterSecondStepFragment extends BaseFragment<UserController.User
     public void onDestroy() {
         super.onDestroy();
         // destroy前一定要取消计时，否则会内存泄露
-        mSendCodeBtn.cancelCountDown();
+        if (mSendCodeBtn != null) {
+            mSendCodeBtn.cancelCountDown();
+        }
     }
 
     @Override

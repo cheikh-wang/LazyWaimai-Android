@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
-import butterknife.Bind;
+import butterknife.BindView;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BaseActivity;
 import com.cheikh.lazywaimai.base.BaseController;
@@ -36,10 +36,10 @@ import com.cheikh.lazywaimai.util.MainTab;
 public class MainActivity extends BaseActivity<MainController.MainUiCallbacks>
         implements MainController.MainHomeUi {
 
-    @Bind(R.id.viewpager)
+    @BindView(R.id.viewpager)
     ViewPager mViewPager;
 
-    @Bind(R.id.viewpager_tab)
+    @BindView(R.id.viewpager_tab)
     SmartTabLayout mViewpagerTab;
 
     private DoubleExitUtil mDoubleClickExit;
