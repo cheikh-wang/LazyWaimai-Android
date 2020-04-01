@@ -85,7 +85,9 @@ public class RegisterSecondStepFragment extends BaseFragment<UserController.User
     public void onDestroy() {
         super.onDestroy();
         // destroy前一定要取消计时，否则会内存泄露
-        mSendCodeBtn.cancelCountDown();
+        if (mSendCodeBtn != null) {
+            mSendCodeBtn.cancelCountDown();
+        }
     }
 
     @Override
