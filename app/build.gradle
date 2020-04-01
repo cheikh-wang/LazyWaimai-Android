@@ -98,6 +98,8 @@ dependencies {
     implementation 'com.flipboard:bottomsheet-core:1.5.0'
     // 拍照或者从相册中选择图片进行裁剪
     implementation 'com.jph.takephoto:takephoto_library:2.0.4'
+    // 沉浸式状态栏和沉浸式导航栏管理
+    implementation "com.gyf.immersionbar:immersionbar:2.3.1"
     // 检查内存泄露的工具
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'

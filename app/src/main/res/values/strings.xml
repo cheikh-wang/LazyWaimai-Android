@@ -85,7 +85,7 @@
     <string name="label_step_three">3. 设置密码</string>
     <string name="label_male">先生</string>
     <string name="label_female">女士</string>
-    <string name="label_click_button_to_retry">点击按钮重试</string>
+    <string name="label_click_button_to_retry">点击重试</string>
     <string name="label_send_code_title">验证码短信已经发送到%1$s</string>
     <string name="label_price">￥%1$.1f</string>
     <string name="label_discount_price">-￥%1$.1f</string>

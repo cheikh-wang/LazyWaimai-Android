@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import com.cheikh.lazywaimai.R;
 import com.cheikh.lazywaimai.base.BasePermissionActivity;
+import com.gyf.barlibrary.ImmersionBar;
 
 
 public class SplashActivity extends BasePermissionActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        ImmersionBar.with(this).transparentBar().init();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 

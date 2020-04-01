@@ -52,6 +52,10 @@
         <item name="divider">@color/divider</item>
     </style>
 
+    <style name="Theme.LazyOrder.Splash">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
     <style name="Theme.Philm.Images" parent="Base.Theme.LazyOrder.Dark">
         <item name="android:windowBackground">@android:color/black</item>
     </style>
