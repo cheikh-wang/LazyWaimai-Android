@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29"
 
     defaultConfig {
         applicationId "com.cheikh.lazywaimai"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -42,13 +42,13 @@ android {
 
 configurations.all {
     // 如下依赖冲突时强制使用制定版本
-    resolutionStrategy {
-        force "com.android.support:appcompat-v7:$supportVersion"
-        force "com.android.support:design:$supportVersion"
-        force "com.android.support:support-annotation:$supportVersion"
-        force "com.android.support:support-v4:$supportVersion"
-        force "com.android.support:support-v7:$supportVersion"
-    }
+    //    resolutionStrategy {
+    //        force "com.android.support:appcompat-v7:$supportVersion"
+    //        force "com.android.support:design:$supportVersion"
+    //        force "com.android.support:support-annotation:$supportVersion"
+    //        force "com.android.support:support-v4:$supportVersion"
+    //        force "com.android.support:support-v7:$supportVersion"
+    //    }
 }
 
 dependencies {
@@ -63,8 +63,8 @@ dependencies {
     implementation 'com.google.guava:guava:18.0'
     implementation 'com.google.code.gson:gson:2.6.1'
     // View注入框架
-    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
     // 依赖注入框架
     implementation 'com.squareup.dagger:dagger:1.2.2'
     annotationProcessor 'com.squareup.dagger:dagger-compiler:1.2.2'
@@ -81,7 +81,7 @@ dependencies {
     // 漂亮的日志打印工具
     implementation 'com.orhanobut:logger:2.2.0'
     // View注入框架
-    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:10.2.1'
     // 动画库
     implementation 'com.nineoldandroids:library:2.4.0'
     // 底部Tab组件

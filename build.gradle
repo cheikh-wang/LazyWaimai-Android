@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 ext {
-    supportVersion = '28.0.0'
+    supportVersion = '29'
 }
 
 buildscript {
@@ -10,11 +10,11 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.6.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.1'
     }
 }
 
